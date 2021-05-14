@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="65696" started-at="2021-05-14T13:39:17Z" finished-at="2021-05-14T13:40:23Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="65696" started-at="2021-05-14T13:39:17Z" finished-at="2021-05-14T13:40:23Z">
+      <class name="com.jbk.test.RegisterTest">
+        <test-method status="PASS" signature="verifyUrl()[pri:1, instance:com.jbk.test.RegisterTest@6a4f787b]" name="verifyUrl" duration-ms="22" started-at="2021-05-14T13:39:49Z" finished-at="2021-05-14T13:39:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUrl -->
+      </class> <!-- com.jbk.test.RegisterTest -->
+      <class name="com.jbk.test.AddUserTest">
+        <test-method status="PASS" signature="OpenBrowser()[pri:0, instance:com.jbk.test.AddUserTest@5622fdf]" name="OpenBrowser" is-config="true" duration-ms="5993" started-at="2021-05-14T13:38:43Z" finished-at="2021-05-14T13:38:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method status="PASS" signature="OpenBrowser()[pri:0, instance:com.jbk.test.DashboardTest@685cb137]" name="OpenBrowser" is-config="true" duration-ms="4491" started-at="2021-05-14T13:38:49Z" finished-at="2021-05-14T13:38:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method status="PASS" signature="OpenBrowser()[pri:0, instance:com.jbk.test.DownloadsTest@6d4b1c02]" name="OpenBrowser" is-config="true" duration-ms="4575" started-at="2021-05-14T13:38:53Z" finished-at="2021-05-14T13:38:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method status="PASS" signature="OpenBrowser()[pri:0, instance:com.jbk.test.LoginTest@6a41eaa2]" name="OpenBrowser" is-config="true" duration-ms="2511" started-at="2021-05-14T13:38:58Z" finished-at="2021-05-14T13:39:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method status="PASS" signature="OpenBrowser()[pri:0, instance:com.jbk.test.OperatorsTest@7cd62f43]" name="OpenBrowser" is-config="true" duration-ms="4735" started-at="2021-05-14T13:39:00Z" finished-at="2021-05-14T13:39:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method status="PASS" signature="OpenBrowser()[pri:0, instance:com.jbk.test.RegisterTest@6a4f787b]" name="OpenBrowser" is-config="true" duration-ms="2699" started-at="2021-05-14T13:39:05Z" finished-at="2021-05-14T13:39:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method status="PASS" signature="OpenBrowser()[pri:0, instance:com.jbk.test.UsefulLinksTest@604ed9f0]" name="OpenBrowser" is-config="true" duration-ms="4588" started-at="2021-05-14T13:39:08Z" finished-at="2021-05-14T13:39:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method status="PASS" signature="OpenBrowser()[pri:0, instance:com.jbk.test.UsersTest@6093dd95]" name="OpenBrowser" is-config="true" duration-ms="4598" started-at="2021-05-14T13:39:12Z" finished-at="2021-05-14T13:39:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method status="PASS" signature="verifyPrintingDragDownOptions()[pri:1, instance:com.jbk.test.AddUserTest@5622fdf]" name="verifyPrintingDragDownOptions" duration-ms="319" started-at="2021-05-14T13:39:50Z" finished-at="2021-05-14T13:39:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPrintingDragDownOptions -->
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:com.jbk.test.AddUserTest@5622fdf]" name="CloseBrowser" is-config="true" duration-ms="861" started-at="2021-05-14T13:40:23Z" finished-at="2021-05-14T13:40:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:com.jbk.test.DashboardTest@685cb137]" name="CloseBrowser" is-config="true" duration-ms="774" started-at="2021-05-14T13:40:23Z" finished-at="2021-05-14T13:40:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:com.jbk.test.DownloadsTest@6d4b1c02]" name="CloseBrowser" is-config="true" duration-ms="869" started-at="2021-05-14T13:40:24Z" finished-at="2021-05-14T13:40:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:com.jbk.test.LoginTest@6a41eaa2]" name="CloseBrowser" is-config="true" duration-ms="827" started-at="2021-05-14T13:40:25Z" finished-at="2021-05-14T13:40:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:com.jbk.test.OperatorsTest@7cd62f43]" name="CloseBrowser" is-config="true" duration-ms="798" started-at="2021-05-14T13:40:26Z" finished-at="2021-05-14T13:40:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:com.jbk.test.RegisterTest@6a4f787b]" name="CloseBrowser" is-config="true" duration-ms="802" started-at="2021-05-14T13:40:27Z" finished-at="2021-05-14T13:40:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:com.jbk.test.UsefulLinksTest@604ed9f0]" name="CloseBrowser" is-config="true" duration-ms="843" started-at="2021-05-14T13:40:28Z" finished-at="2021-05-14T13:40:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:com.jbk.test.UsersTest@6093dd95]" name="CloseBrowser" is-config="true" duration-ms="793" started-at="2021-05-14T13:40:28Z" finished-at="2021-05-14T13:40:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- com.jbk.test.AddUserTest -->
+      <class name="com.jbk.test.DownloadsTest">
+        <test-method status="PASS" signature="verifyOperatingSystem_32bit()[pri:1, instance:com.jbk.test.DownloadsTest@6d4b1c02]" name="verifyOperatingSystem_32bit" duration-ms="366" started-at="2021-05-14T13:39:49Z" finished-at="2021-05-14T13:39:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyOperatingSystem_32bit -->
+      </class> <!-- com.jbk.test.DownloadsTest -->
+      <class name="com.jbk.test.UsersTest">
+        <test-method status="PASS" signature="verifyHeadingsAl()[pri:1, instance:com.jbk.test.UsersTest@6093dd95]" name="verifyHeadingsAl" duration-ms="228" started-at="2021-05-14T13:39:49Z" finished-at="2021-05-14T13:39:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeadingsAl -->
+      </class> <!-- com.jbk.test.UsersTest -->
+      <class name="com.jbk.test.LoginTest">
+        <test-method status="PASS" signature="verifyUrl()[pri:1, instance:com.jbk.test.LoginTest@6a41eaa2]" name="verifyUrl" duration-ms="15" started-at="2021-05-14T13:39:49Z" finished-at="2021-05-14T13:39:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUrl -->
+      </class> <!-- com.jbk.test.LoginTest -->
+      <class name="com.jbk.test.UsefulLinksTest">
+        <test-method status="PASS" signature="verifyClickGO()[pri:1, instance:com.jbk.test.UsefulLinksTest@604ed9f0]" name="verifyClickGO" duration-ms="31662" started-at="2021-05-14T13:39:17Z" finished-at="2021-05-14T13:39:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyClickGO -->
+        <test-method status="PASS" signature="verifyClickGoExcel()[pri:2, instance:com.jbk.test.UsefulLinksTest@604ed9f0]" name="verifyClickGoExcel" duration-ms="32592" started-at="2021-05-14T13:39:50Z" finished-at="2021-05-14T13:40:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyClickGoExcel -->
+      </class> <!-- com.jbk.test.UsefulLinksTest -->
+      <class name="com.jbk.test.OperatorsTest">
+        <test-method status="PASS" signature="verifycontactNoLength()[pri:1, instance:com.jbk.test.OperatorsTest@7cd62f43]" name="verifycontactNoLength" duration-ms="361" started-at="2021-05-14T13:39:49Z" finished-at="2021-05-14T13:39:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifycontactNoLength -->
+      </class> <!-- com.jbk.test.OperatorsTest -->
+      <class name="com.jbk.test.DashboardTest">
+        <test-method status="PASS" signature="verifyUrl()[pri:1, instance:com.jbk.test.DashboardTest@685cb137]" name="verifyUrl" duration-ms="17" started-at="2021-05-14T13:39:49Z" finished-at="2021-05-14T13:39:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUrl -->
+      </class> <!-- com.jbk.test.DashboardTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
