@@ -42,7 +42,7 @@ public class AddUserTest
 	}
 	
 	@Test (priority=3)
-	public void verifyValidAddUser()
+	public void verifyValidAddUser() throws Exception
 	{
 		Assert.assertTrue(ap.validAddUser());
 	}

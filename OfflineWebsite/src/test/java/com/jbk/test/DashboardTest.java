@@ -69,6 +69,12 @@ public class DashboardTest
 		Assert.assertTrue(dp.userStatus());
 	}
 	
+	@Test (priority=8)
+	public void verifynavigationMenuText () 
+	{
+		Assert.assertTrue(dp.navigationMenuText());
+	}
+	
 	@Test (priority=9)
 	public void verifyUsersMenu() 
 	{
@@ -136,7 +142,7 @@ public class DashboardTest
 	}
 	
 	@Test (priority=20)
-	public void verifyJBK_Link () throws InterruptedException 
+	public void verifyJBK_Link () throws Exception 
 	{
 		Assert.assertTrue(dp.jbk_Link());
 	}

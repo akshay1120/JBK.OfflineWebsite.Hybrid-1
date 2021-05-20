@@ -1,19 +1,14 @@
 package com.jbk.pages;
 
-import java.io.FileInputStream;
 import java.util.ArrayList;
-import java.util.Set;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.jbk.objectRepository.UsefulLinksPgObjRepo;
+import com.utility.ExcelUtility;
+import com.utility.Utility;
+import com.utility.WindowHandlingUtility;
 
 public class UsefulLinksPage extends UsefulLinksPgObjRepo
 {
@@ -28,7 +23,7 @@ public class UsefulLinksPage extends UsefulLinksPgObjRepo
 	//1
 	public boolean clickGO() throws Exception
 	{
-		ArrayList <String>actData = new ArrayList <String>();
+		ArrayList<String>actData = WindowHandlingUtility.getWindowsTitles(clickCol, driver);
 		
 		ArrayList <String>expData = new ArrayList <String>();
 		expData.add("Page not found | javabyKiran");
@@ -38,29 +33,6 @@ public class UsefulLinksPage extends UsefulLinksPgObjRepo
 		expData.add("Live Videos | javabyKiran");
 		expData.add("Page not found | javabyKiran");
 	
-		String parent = driver.getWindowHandle();
-		
-		for (WebElement element : clickCol)
-		{
-			element.click();
-			Thread.sleep(5000);
-		}
-		
-		Set <String> allWindows = driver.getWindowHandles();
-		
-		for(String child : allWindows)
-		{
-			if(!parent.equalsIgnoreCase(child))
-			{
-				driver.switchTo().window(child);
-				actData.add(driver.getTitle());
-				System.out.println(driver.getTitle());
-				driver.close();
-			}
-		}
-		
-		driver.switchTo().window(parent);
-		
 		if(actData.equals(expData))
 			return true ;
 		else 	
@@ -70,49 +42,9 @@ public class UsefulLinksPage extends UsefulLinksPgObjRepo
 	//2
 	public boolean clickGoExcel() throws Exception 
 	{
-		ArrayList <String>actData = new ArrayList <String>();
+		ArrayList <String>actData = WindowHandlingUtility.getWindowsTitles(clickCol, driver);;
 		
-		ArrayList <String>expData = new ArrayList <String>();
-		
-		String value=null;
-		FileInputStream fis = new FileInputStream("Data.xlsx");
-		Workbook wb = WorkbookFactory.create(fis);
-		Sheet sh = wb.getSheet("GoLinks");
-		int row=sh.getPhysicalNumberOfRows();
-		
-		for (int i = 0; i < row; i++) 
-		{
-			int col=sh.getRow(i).getLastCellNum();
-			for (int j = 0; j <col; j++) 
-			{
-				Cell cell=sh.getRow(i).getCell(j);
-				DataFormatter df=new DataFormatter();
-				value=df.formatCellValue(cell);
-				expData.add(value);
-			}
-		}
-		String parent = driver.getWindowHandle();
-		
-		for (WebElement element : clickCol)
-		{
-			element.click();
-			Thread.sleep(5000);
-		}
-		
-		Set <String> allWindows = driver.getWindowHandles();
-		
-		for(String child : allWindows)
-		{
-			if(!parent.equalsIgnoreCase(child))
-			{
-				driver.switchTo().window(child);
-				actData.add(driver.getTitle());
-				System.out.println(driver.getTitle());
-				driver.close();
-			}
-		}
-		
-		driver.switchTo().window(parent);
+		ArrayList <String>expData = ExcelUtility.getTableColData("Data.xlsx", "GoLinks", 0, 0);
 		
 		if(actData.equals(expData))
 			return true ;
@@ -123,39 +55,9 @@ public class UsefulLinksPage extends UsefulLinksPgObjRepo
 	//3
 	public boolean complete_UsefulLinksTable() throws Exception 
 	{
-		ArrayList <String>actData = new ArrayList <String>();
+		ArrayList <String>actData = Utility.getCompleteSheetData(tableHead, tableData);
 		
-		ArrayList <String>expData = new ArrayList <String>();
-		
-		String value=null;
-		FileInputStream fis = new FileInputStream("Data.xlsx");
-		Workbook wb = WorkbookFactory.create(fis);
-		Sheet sh = wb.getSheet("UsefulLinks");
-		int row=sh.getPhysicalNumberOfRows();
-		
-		for (int i = 0; i < row; i++) 
-		{
-			int col=sh.getRow(i).getLastCellNum();
-			for (int j = 0; j <col; j++) 
-			{
-				Cell cell=sh.getRow(i).getCell(j);
-				DataFormatter df=new DataFormatter();
-				value=df.formatCellValue(cell);
-				expData.add(value);
-			}
-		}
-		
-		for (WebElement element : tableHead)
-		{
-			String data = element.getText();
-			actData.add(data);
-		}
-		
-		for (WebElement element : tableData)
-		{
-			String data = element.getText();
-			actData.add(data);
-		}
+		ArrayList <String>expData = ExcelUtility.getTableData("Data.xlsx", "UsefulLinks");
 		
 		if(actData.equals(expData))
 			return true ;

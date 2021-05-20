@@ -1,19 +1,14 @@
 package com.jbk.pages;
 
-import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.jbk.objectRepository.OperatorsPgObjRepo;
+import com.utility.ExcelUtility;
+import com.utility.Utility;
 
 public class OperatorsPage extends OperatorsPgObjRepo
 {
@@ -28,7 +23,9 @@ public class OperatorsPage extends OperatorsPgObjRepo
 	//1
 	public boolean contactNoLength()
 	{	
-		ArrayList <String>actData = new ArrayList <String>();
+		System.out.println("Actual Faculties having 10 digit Mobile No. : ");
+		
+		ArrayList <String>actData = Utility.getListLengthXYZ(contactCol, personCol, 10);
 		
 		ArrayList <String>expData = new ArrayList <String>();
 		expData.add("Kiran");
@@ -36,23 +33,6 @@ public class OperatorsPage extends OperatorsPgObjRepo
 		expData.add("Seema");
 		expData.add("Varsha");
 		expData.add("Darshit");
-		
-		System.out.println("Faculties having 10 digit Mobile No. : ");
-	
-		int i=0 ;
-		
-		for (WebElement element : contactCol)
-		{
-			String contact = element.getText();
-			
-			if (contact.length()==10)
-			{
-				String faculty = personCol.get(i).getText();
-				System.out.println(faculty);
-				actData.add(faculty);
-			}
-			i++ ;
-		}
 		
 		if(actData.equals(expData))
 			return true ;
@@ -63,7 +43,7 @@ public class OperatorsPage extends OperatorsPgObjRepo
 	//2
 	public boolean namesInAlphabeticalOrder()
 	{
-		ArrayList <String>actData = new ArrayList <String>();
+		ArrayList <String>actData = Utility.getListOfElements(personCol);
 		
 		ArrayList <String>expData = new ArrayList <String>();
 		expData.add("Darshit");
@@ -71,13 +51,6 @@ public class OperatorsPage extends OperatorsPgObjRepo
 		expData.add("Neelam");
 		expData.add("Seema");
 		expData.add("Varsha");
-		
-		for (WebElement element : personCol)
-		{
-			String name = element.getText();
-			
-			actData.add(name);
-		}
 		
 		Collections.sort(actData);
 		
@@ -98,7 +71,9 @@ public class OperatorsPage extends OperatorsPgObjRepo
 	//3
 	public boolean prefferedWayToConnect_WhatsApp()
 	{	
-	  	ArrayList <String>actData = new ArrayList <String>();
+		System.out.println("Actual Faculties available on WhatsApp : ");
+		
+	  	ArrayList <String>actData = Utility.getListContainingXYZ(prefferedWayToConnectCol, personCol, "Whats App");
 		
 		ArrayList <String>expData = new ArrayList <String>();
 		expData.add("Kiran");
@@ -106,23 +81,6 @@ public class OperatorsPage extends OperatorsPgObjRepo
 		expData.add("Seema");
 		expData.add("Varsha");
 		expData.add("Darshit");
-		
-		System.out.println("Faculties available on WhatsApp : ");
-	
-		int i=0 ;
-		
-		for (WebElement element : prefferedWayToConnectCol)
-		{
-			String contact = element.getText();
-			
-			if (contact.contains("Whats App"))
-			{
-				String faculty = personCol.get(i).getText();
-				System.out.println(faculty);
-				actData.add(faculty);
-			}
-			i++ ;
-		}
 		
 		if(actData.equals(expData))
 			return true ;
@@ -133,29 +91,14 @@ public class OperatorsPage extends OperatorsPgObjRepo
 	//4
 	public boolean prefferedWayToConnect_PhoneCall()
 	{	
-		ArrayList <String>actData = new ArrayList <String>();
+		System.out.println("Actual Faculties available on Phone Call : ");
+		
+		ArrayList <String>actData = Utility.getListContainingXYZ(prefferedWayToConnectCol, personCol, "Phone Call");
 		
 		ArrayList <String>expData = new ArrayList <String>();
 		expData.add("Neelam");
 		expData.add("Seema");
 		expData.add("Varsha");
-		
-		System.out.println("Faculties available on Phone Call : ");
-	
-		int i=0 ;
-		
-		for (WebElement element : prefferedWayToConnectCol)
-		{
-			String contact = element.getText();
-			
-			if (contact.contains("Phone Call"))
-			{
-				String faculty = personCol.get(i).getText();
-				System.out.println(faculty);
-				actData.add(faculty);
-			}
-			i++ ;
-		}
 		
 		if(actData.equals(expData))
 			return true ;
@@ -166,29 +109,14 @@ public class OperatorsPage extends OperatorsPgObjRepo
 	//5
 	public boolean prefferedWayToConnect_WhatsApp_And_PhoneCall()
 	{	
-		ArrayList <String>actData = new ArrayList <String>();
+		System.out.println("Actual Faculties available on both WhatsApp & Phone Call : ");
+		
+		ArrayList <String>actData = Utility.getListContainingABC_and_XYZ(prefferedWayToConnectCol, personCol, "Whats App", "Phone Call");
 		
 		ArrayList <String>expData = new ArrayList <String>();
 		expData.add("Neelam");
 		expData.add("Seema");
 		expData.add("Varsha");
-		
-		System.out.println("Faculties available on both WhatsApp & Phone Call : ");
-	
-		int i=0 ;
-		
-		for (WebElement element : prefferedWayToConnectCol)
-		{
-			String contact = element.getText();
-			
-			if (contact.contains("Whats App") && contact.contains("Phone Call"))
-			{
-					String faculty = personCol.get(i).getText();
-					System.out.println(faculty);
-					actData.add(faculty);
-			}
-			i++ ;
-		}
 		
 		if(actData.equals(expData))
 			return true ;
@@ -199,31 +127,15 @@ public class OperatorsPage extends OperatorsPgObjRepo
 	//6
 	public boolean prefferedWayToConnect_WhatsApp_ButNot_PhoneCall ()
 	{
-		ArrayList <String>actData = new ArrayList <String>();
+		System.out.println("Actual Faculties available on WhatsApp but not on Phone Call : ");
+		
+		ArrayList <String>actData = Utility.getListContainingABC_not_XYZ(prefferedWayToConnectCol, personCol, "Whats App", "Phone Call");
 		
 		ArrayList <String>expData = new ArrayList <String>();
 		expData.add("Kiran");
 		expData.add("Darshit");
 		
 		System.out.println("Faculties available on WhatsApp but not on Phone Call : ");
-	
-		int i=0 ;
-		
-		for (WebElement element : prefferedWayToConnectCol)
-		{
-			String contact = element.getText();
-			
-			if (contact.contains("Whats App"))
-			{
-				if (!contact.contains("Phone Call"))
-				{
-					String faculty = personCol.get(i).getText();
-					System.out.println(faculty);
-					actData.add(faculty);
-				}
-			}
-			i++ ;
-		}
 		
 		if(actData.equals(expData))
 			return true ;
@@ -234,30 +146,15 @@ public class OperatorsPage extends OperatorsPgObjRepo
 	//7
 	public boolean facultiesAvailableOnMonday ()
 	{	
-		ArrayList <String>actData = new ArrayList <String>();
+		System.out.println("Actual Faculties available on Monday : ");
+		
+		ArrayList <String>actData = Utility.getListContainingXYZ(timingsCol, personCol, "Monday");
 		
 		ArrayList <String>expData = new ArrayList <String>();
 		expData.add("Kiran");
 		expData.add("Neelam");
 		expData.add("Seema");
 		expData.add("Varsha");
-		
-		System.out.println("Faculties available on Monday : ");
-		
-		int i=0 ;
-		
-		for (WebElement element : timingsCol)
-		{
-			String days = element.getText();
-			
-			if (days.contains("Monday"))
-			{
-				String faculty = personCol.get(i).getText();
-				System.out.println(faculty);
-				actData.add(faculty);
-			}
-			i++ ;
-		}
 		
 		if(actData.equals(expData))
 			return true ;
@@ -268,28 +165,13 @@ public class OperatorsPage extends OperatorsPgObjRepo
 	//8
 	public boolean facultiesNotAvailableOnSunday ()
 	{
-		ArrayList <String>actData = new ArrayList <String>();
+		System.out.println("Actual Faculties not available on Sunday : ");
+		
+		ArrayList <String>actData = Utility.getListNotContainingXYZ(timingsCol, personCol, "Sunday");
 		
 		ArrayList <String>expData = new ArrayList <String>();
 		expData.add("Neelam");
 		expData.add("Seema");
-		
-		System.out.println("Faculties not available on Sunday : ");
-		
-		int i=0 ;
-		
-		for (WebElement element : timingsCol)
-		{
-			String days = element.getText();
-			
-			if (!days.contains("Sunday"))
-			{
-				String faculty = personCol.get(i).getText();
-				System.out.println(faculty);
-				actData.add(faculty);
-			}
-			i++ ;
-		}
 		
 		if(actData.equals(expData))
 			return true ;
@@ -300,39 +182,9 @@ public class OperatorsPage extends OperatorsPgObjRepo
 	//9
 	public boolean CompleteOperatorsTable () throws Exception
 	{
-		ArrayList <String>actData = new ArrayList <String>();
+		ArrayList <String>actData = Utility.getCompleteSheetData(headings, tableData);
 		
-		ArrayList <String>expData = new ArrayList <String>();
-		
-		String value=null;
-		FileInputStream fis = new FileInputStream("Data.xlsx");
-		Workbook wb = WorkbookFactory.create(fis);
-		Sheet sh = wb.getSheet("Operators");
-		int row=sh.getPhysicalNumberOfRows();
-		
-		for (int i = 0; i < row; i++) 
-		{
-			int col=sh.getRow(i).getLastCellNum();
-			for (int j = 0; j <col; j++) 
-			{
-				Cell cell=sh.getRow(i).getCell(j);
-				DataFormatter df=new DataFormatter();
-				value=df.formatCellValue(cell);
-				expData.add(value);
-			}
-		}
-		
-		for (WebElement element : headings)
-		{
-			String data = element.getText();
-			actData.add(data);
-		}
-		
-		for (WebElement element : tableData)
-		{
-			String data = element.getText();
-			actData.add(data);
-		}
+		ArrayList <String>expData = ExcelUtility.getTableData("Data.xlsx", "Operators");
 		
 		if(actData.equals(expData))
 			return true ;

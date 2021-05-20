@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.jbk.test.UsefulLinksTest">
+      <class name="com.jbk.test.DownloadsTest">
         <methods>
-          <include name="OpenBrowser"/>
           <include name="CloseBrowser"/>
-          <include name="verifyComplete_UsefulLinksTable"/>
+          <include name="OpenBrowser"/>
+          <include name="verifyNone"/>
         </methods>
-      </class> <!-- com.jbk.test.UsefulLinksTest -->
+      </class> <!-- com.jbk.test.DownloadsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

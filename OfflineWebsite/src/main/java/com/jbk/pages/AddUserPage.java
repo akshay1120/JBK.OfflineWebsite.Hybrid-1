@@ -1,21 +1,16 @@
 package com.jbk.pages;
 
-import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.jbk.objectRepository.AddUserPgObjRepo;
+import com.utility.ExcelUtility;
+import com.utility.Utility;
 
 public class AddUserPage extends AddUserPgObjRepo
 {
@@ -30,8 +25,6 @@ public class AddUserPage extends AddUserPgObjRepo
 	//1
 	public boolean printingDragDownOptions()
 	{
-		ArrayList <String> actDragDownOptions = new ArrayList <String>();
-		
 		ArrayList <String> expDragDownOptions  = new ArrayList <String>();
 		expDragDownOptions.add("--Select State--");
 		expDragDownOptions.add("Maharashtra");
@@ -43,11 +36,7 @@ public class AddUserPage extends AddUserPgObjRepo
 		
 		List <WebElement> list = selectstate.getOptions();
 		
-		for(WebElement element : list)
-		{
-			actDragDownOptions.add(element.getText());
-			System.out.println(element.getText());
-		}
+		ArrayList <String> actDragDownOptions = Utility.getListOfElements(list);
 		
 		if(actDragDownOptions.equals(expDragDownOptions))
 			return true ;
@@ -58,59 +47,34 @@ public class AddUserPage extends AddUserPgObjRepo
 	//2
 	public boolean printingDragDownOptExcel() throws Exception
 	{
-		ArrayList <String> actDragDownOptions1 = new ArrayList <String>();
-		
-		ArrayList <String> expDragDownOptions1  = new ArrayList <String>();
+		ArrayList <String> expDragDownOptions  = ExcelUtility.getTableColData("Data.xlsx", "DragDown", 0, 0);
 		
 		Select selectstates = new Select(selectState);
 		
 		List <WebElement> list = selectstates.getOptions();
 		
-		for(WebElement element : list)
-		{
-			actDragDownOptions1.add(element.getText());
-			System.out.println(element.getText());
-		}
+		ArrayList <String> actDragDownOptions = Utility.getListOfElements(list);
 		
-		String value=null;
-		FileInputStream fis = new FileInputStream("Data.xlsx");
-		Workbook wb = WorkbookFactory.create(fis);
-		Sheet sh = wb.getSheet("DragDown");
-		int row=sh.getPhysicalNumberOfRows();
-		
-		for (int i=0 ; i<row ; i++) 
-		{
-			int col=sh.getRow(i).getLastCellNum();
-			for (int j=0; j<col ; j++) 
-			{
-				Cell cell=sh.getRow(i).getCell(j);
-				DataFormatter df=new DataFormatter();
-				value=df.formatCellValue(cell);
-				expDragDownOptions1.add(value);
-			}
-		}
-		
-		if(actDragDownOptions1.equals(expDragDownOptions1))
+		if(actDragDownOptions.equals(expDragDownOptions))
 			return true ;
 		else
 			return false ;
 	}
 	
 	//3
-	public boolean validAddUser()
+	public boolean validAddUser() throws Exception
 	{
-		userName.sendKeys("ASJ");
-		mobile.sendKeys("94000000000");
-		email.sendKeys("aj@gmail.com");
-		course.sendKeys("Java");
-		genderMale.click();
-		maharashtra.click();;
-		pass.sendKeys("asdfg");
-		submitBtn.click();
+		Utility.sendkeys(userName, "Asj");
+		Utility.sendkeys(mobile, "940000000000");
+		Utility.sendkeys(email, "aj@gmail.com");
+		Utility.sendkeys(course, "Java");
+		Utility.click(genderMale);
+		Utility.click(maharashtra);
+		Utility.sendkeys(pass, "asdfgh");
+		Utility.click(submitBtn);
+		Thread.sleep(2000);
 		
-		Alert al = driver.switchTo().alert();
-		String actMsg = al.getText();
-		al.accept();
+		String actMsg = Utility.getAlertMsg_accept(driver);
 		
 		String expMsg = "User Added Successfully. You can not see added user.";
 		
