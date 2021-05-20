@@ -1,4 +1,4 @@
-package com.jbk.test;
+package com.jbk.testbase;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -24,12 +24,12 @@ public class TestBase
 		System.out.println(browserName);
 		
 		if(browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe");
 			
 			driver=new ChromeDriver();
 		}
 		else if(browserName.equals("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "C:\\Users\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "C:/geckodriver.exe");
 			driver=new FirefoxDriver();
 		}
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

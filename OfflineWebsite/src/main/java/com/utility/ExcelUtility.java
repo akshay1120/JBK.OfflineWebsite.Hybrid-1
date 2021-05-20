@@ -12,7 +12,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 public class ExcelUtility 
 {
 	// To get data from particular Column..
-	public static ArrayList<String> getTableColData(String fileNm,String sheetNm,int colNo , int fromRow)throws Exception
+	public static ArrayList<String> getTableColData(String fileNm, String sheetNm, int colNo, int fromRow)throws Exception
 	{
 		ArrayList<String> expData=new ArrayList<String>();
 		String value=null;
@@ -29,14 +29,13 @@ public class ExcelUtility
 			DataFormatter df = new DataFormatter();
 			value = df.formatCellValue(cell);
 			expData.add(value);
-			System.out.println(value);
 		}
 		return expData;
 	 }
 	 
 	 
 	// To get data from particular Row..
-	public static ArrayList<String> getTableRowData(String fileNm , String sheetNm , int rowNo , int fromCol)throws Exception
+	public static ArrayList<String> getTableRowData(String fileNm ,String sheetNm ,int rowNo ,int fromCol)throws Exception
 	{
 		ArrayList<String> expData=new ArrayList<String>();
 		String value = null;
@@ -53,13 +52,12 @@ public class ExcelUtility
 			DataFormatter df = new DataFormatter();
 			value = df.formatCellValue(cell);
 			expData.add(value);
-			//System.out.println(value);
 		}
 		return expData;
 	 }
 	 
 	 
-	public static ArrayList<String> getTableData(String fileNm,String sheetNm)throws Exception
+	public static ArrayList<String> getTableData(String fileNm, String sheetNm)throws Exception
 	{
 		ArrayList<String> expData = new ArrayList<String>();
 		String value = null;
@@ -80,7 +78,6 @@ public class ExcelUtility
 				DataFormatter df = new DataFormatter();
 				value = df.formatCellValue(cell);
 				expData.add(value);
-				//System.out.println(value);
 			}
 		}
 		return expData;
