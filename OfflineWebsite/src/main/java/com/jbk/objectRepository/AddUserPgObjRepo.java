@@ -4,16 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class AddUserPgObjRepo 
-{
-	@FindBy(id="email")
-	public WebElement uname ;
-	
-	@FindBy(id="password")
-	public WebElement pass ;
-	
-	@FindBy(xpath = "//button")
-	public WebElement lgnBtn ;
-	
+{	
 	@FindBy(xpath = "//span[text()='Users']")
 	public WebElement users;
 	
@@ -22,6 +13,9 @@ public class AddUserPgObjRepo
 	
 	@FindBy(id="username")
 	public WebElement userName ;
+	
+	@FindBy(id="password")
+	public WebElement pass ;
 	
 	@FindBy(id="mobile")
 	public WebElement mobile ;

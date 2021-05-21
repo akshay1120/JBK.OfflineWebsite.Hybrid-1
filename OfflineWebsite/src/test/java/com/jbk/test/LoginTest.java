@@ -1,26 +1,25 @@
 package com.jbk.test;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import com.jbk.pages.LoginPage;
+import com.jbk.testbase.TestBase;
 
-public class LoginTest 
+public class LoginTest extends TestBase
 {
 	WebDriver driver ;
 	LoginPage lp = null ;
 	
 	@BeforeSuite
-	public void OpenBrowser ()
+	public void OpenBrowser () throws IOException
 	{
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("file:///C:/Offline%20Website/index.html");
+		driver = initialization();
 		lp = new LoginPage(driver);
 	}
 	

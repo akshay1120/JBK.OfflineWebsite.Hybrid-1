@@ -1,28 +1,25 @@
 package com.jbk.test;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import com.jbk.pages.RegisterPage;
+import com.jbk.testbase.TestBase;
 
-public class RegisterTest 
+public class RegisterTest extends TestBase
 {
 	WebDriver driver ;
 	RegisterPage rp = null ;
 	
 	@BeforeSuite
-	public void OpenBrowser ()
+	public void OpenBrowser () throws Exception
 	{
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("file:///C:/Offline%20Website/index.html");
+		driver = initialization();
+		rp = navigateToLoginPg().navigateToRegisterPg();
 		rp = new RegisterPage(driver);
-		rp.registerLink.click();
 	}
 	
 	@Test (priority=1)

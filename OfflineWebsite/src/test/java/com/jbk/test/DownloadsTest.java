@@ -1,31 +1,27 @@
 package com.jbk.test;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import com.jbk.pages.DownloadsPage;
+import com.jbk.testbase.TestBase;
 
-public class DownloadsTest 
+public class DownloadsTest extends TestBase
 {
 	WebDriver driver ;
 	DownloadsPage dpg = null ;
 	
 	@BeforeSuite
-	public void OpenBrowser ()
+	public void OpenBrowser () throws IOException
 	{
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("file:///C:/Offline%20Website/index.html");
+		driver = initialization();
+		dpg = navigateToLoginPg().navigateToDashboardPg().navigateToDownloadsPg();
 		dpg = new DownloadsPage(driver);
-		dpg.uname.sendKeys("kiran@gmail.com");
-		dpg.pass.sendKeys("123456");
-		dpg.lgnBtn.click();
-		dpg.downloads.click();
 	}
 	
 	@Test (priority=1)

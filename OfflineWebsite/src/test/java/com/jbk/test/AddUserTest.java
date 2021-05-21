@@ -1,32 +1,25 @@
 package com.jbk.test;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import com.jbk.pages.AddUserPage;
+import com.jbk.testbase.TestBase;
 
-public class AddUserTest 
+public class AddUserTest extends TestBase
 {
 	WebDriver driver ;
 	AddUserPage ap = null ;
 	
 	@BeforeSuite
-	public void OpenBrowser ()
+	public void OpenBrowser () throws Exception
 	{
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("file:///C:/Offline%20Website/index.html");
+		driver = initialization();
+		ap = navigateToLoginPg().navigateToDashboardPg().navigateToUsersPg().navigateToAddUserPg();
 		ap = new AddUserPage(driver);
-		ap.uname.sendKeys("kiran@gmail.com");
-		ap.pass.sendKeys("123456");
-		ap.lgnBtn.click();
-		ap.users.click();
-		ap.addUser.click();
 	}
 	
 	@Test (priority=1)

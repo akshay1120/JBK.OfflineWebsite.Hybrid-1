@@ -51,4 +51,7 @@ public class UsersPgObjRepo
 	
 	@FindBy(xpath = "//span[text()='Delete']")
 	public List<WebElement> delete;
+	
+	@FindBy(xpath = "//a//button")
+	public WebElement addUserBtn ;
 }

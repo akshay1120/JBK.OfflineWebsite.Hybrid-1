@@ -3,35 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.jbk.test.DashboardTest">
+      <class name="com.jbk.test.LoginTest">
         <methods>
-          <include name="CloseBrowser"/>
-          <include name="verifyUserName"/>
-          <include name="verifyUsersMenu"/>
-          <include name="verifyDownloadsMenu"/>
-          <include name="verifyOperatorsMenu"/>
-          <include name="verifyUserStatus"/>
-          <include name="verifyCourseSubHeading"/>
-          <include name="verifySequence"/>
-          <include name="verifyCourseHeading"/>
-          <include name="verifynavigationMenuText"/>
-          <include name="OpenBrowser"/>
-          <include name="verifyCoursesHeading"/>
-          <include name="verifyUserImage"/>
-          <include name="verifyLeftCornerLogOutMenu"/>
-          <include name="verifyCoursesSubHeading"/>
-          <include name="verifyMoreInfoNewWindow"/>
-          <include name="verifyRightCornerLogOutLink"/>
-          <include name="verifyCoursesMoreInfo"/>
-          <include name="verifyJBK_Link"/>
-          <include name="verifyUsefulLinksMenu"/>
           <include name="verifyUrl"/>
-          <include name="verifyTitle"/>
-          <include name="verifyCornerHeading"/>
-          <include name="verifyFooterStatement"/>
-          <include name="verifyMainHeading"/>
+          <include name="CloseBrowser"/>
+          <include name="OpenBrowser"/>
         </methods>
-      </class> <!-- com.jbk.test.DashboardTest -->
+      </class> <!-- com.jbk.test.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

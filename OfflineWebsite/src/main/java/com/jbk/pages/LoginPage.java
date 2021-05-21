@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import com.jbk.objectRepository.LginPgObjRepo;
+import com.jbk.testbase.TestBase;
 import com.utility.Utility;
 
 public class LoginPage extends LginPgObjRepo
@@ -22,7 +23,9 @@ public class LoginPage extends LginPgObjRepo
 	public boolean url()
 	{
 		String expectedUrl = "file:///C:/Offline%20Website/index.html" ; 
+		
 		String actualUrl = Utility.getCurrentUrl(driver);
+		log.info("Actual Url = " + actualUrl);
 		
 		if(actualUrl.equals(expectedUrl))
 			return true ;
@@ -34,7 +37,9 @@ public class LoginPage extends LginPgObjRepo
 	public boolean title() 
 	{ 	
 		String expectedTitle = "JavaByKiran | Log in" ; 
+		
 		String actualTitle = Utility.getTitle(driver);
+		log.info("Actual Title = " + actualTitle);
 		
 		if(actualTitle.equals(expectedTitle))
 			return true ;
@@ -55,6 +60,8 @@ public class LoginPage extends LginPgObjRepo
 	public boolean mainHeading() 
 	{ 	
 		String actualHeading = Utility.getText(mainHeading);
+		log.info("Actual Heading = " + actualHeading);
+		
 		String expectedHeading = "Java By Kiran" ;
 		
 		if (actualHeading.equals(expectedHeading))
@@ -67,6 +74,8 @@ public class LoginPage extends LginPgObjRepo
 	public boolean subHeading()
 	{
 		String actualSubHeading = Utility.getText(subHeading);
+		log.info("Actual Subheading = " + actualSubHeading);
+		
 		String expectedSubHeading = "JAVA | SELENIUM | PYTHON" ;
 		
 		if (actualSubHeading.equals(expectedSubHeading))
@@ -79,6 +88,8 @@ public class LoginPage extends LginPgObjRepo
 	public boolean signInBoxHeading()
 	{
 		String actualSignInBoxHeading = Utility.getText(signInBoxHeading);
+		log.info("Actual Sign-in box heading = " + actualSignInBoxHeading);
+		
 		String expectedSignInBoxHeading = "Sign in to start your session" ;
 		
 		if (actualSignInBoxHeading.equals(expectedSignInBoxHeading))
@@ -95,6 +106,7 @@ public class LoginPage extends LginPgObjRepo
 		expPlaceholderText.add("Password");
 		
 		ArrayList <String>actPlaceholderText = Utility.getPlaceholdersList(placeholdersList);
+		log.info("List of Actual Placeholders = " + actPlaceholderText);
 		
 		if (actPlaceholderText.equals(expPlaceholderText))
 			return true ;
@@ -110,9 +122,12 @@ public class LoginPage extends LginPgObjRepo
 		Utility.click(lgnBtn);
 		
 		String expectedTitle = "JavaByKiran | Dashboard" ; 
+		
 		String actualTitle = Utility.getTitle(driver);
+		log.info("Actual Title = " + actualTitle);
 		
 		Utility.click(logout);
+		log.info("Clicked Logout Button");
 		
 		if (actualTitle.equals(expectedTitle))
 			return true ;
@@ -124,6 +139,8 @@ public class LoginPage extends LginPgObjRepo
 	public boolean logoutSuccessfullyMessage()
 	{
 		String actMessage = Utility.getText(successfullyLgOutMsg);
+		log.info("Actual Message = " + actMessage);
+		
 		String expMessage = "Logout successfully" ;
 		
 		if (actMessage.equals(expMessage))
@@ -139,8 +156,10 @@ public class LoginPage extends LginPgObjRepo
 		Utility.sendkeys(pass, "123456789");
 		Utility.click(lgnBtn);
 		
-		String expectedTitle = "JavaByKiran | Log in" ;  
+		String expectedTitle = "JavaByKiran | Log in" ; 
+		
 		String actualTitle = Utility.getTitle(driver);
+		log.info("Actual Title = " + actualTitle);
 		
 		if (actualTitle.equals(expectedTitle))
 			return true ;
@@ -156,6 +175,7 @@ public class LoginPage extends LginPgObjRepo
 		expErrorMessage.add("Please enter password 123456");
 		
 		ArrayList <String>actErrorMessage = Utility.getListOfElements(ErrorsList);
+		log.info("List of Actual Error Messages = " + actErrorMessage);
 		
 		if (actErrorMessage.equals(expErrorMessage))
 			return true ;
@@ -175,6 +195,7 @@ public class LoginPage extends LginPgObjRepo
 		expErrorMessage.add("Please enter password.");
 		
 		ArrayList <String>actErrorMessage = Utility.getListOfElements(ErrorsList);
+		log.info("List of Actual Error Messages = " + actErrorMessage);
 		
 		if (actErrorMessage.equals(expErrorMessage))
 			return true ;
@@ -186,6 +207,8 @@ public class LoginPage extends LginPgObjRepo
 	public boolean registerLinkText() 
 	{ 
 		String actualRegisterLinkText = Utility.getText(registerLink);
+		log.info("Actual Register LinkText = " + actualRegisterLinkText);
+		
 		String expectedRegisterLinkText = "Register a new membership" ;
 		
 		if (actualRegisterLinkText.equals(expectedRegisterLinkText))
@@ -198,9 +221,12 @@ public class LoginPage extends LginPgObjRepo
 	public boolean registerLink() 
 	{ 	
 		Utility.click(registerLink);
+		log.info("Clicked the Register Link");
 	
 		String expectedTitle = "JavaByKiran | Registration Page" ; 
+		
 		String actualTitle = Utility.getTitle(driver);
+		log.info("Actual Title = " + actualTitle);
 		
 		Utility.click(alreadyMemberLink);
 		
@@ -208,5 +234,24 @@ public class LoginPage extends LginPgObjRepo
 			return true ;
 		else
 			return false ;
+	}
+	
+	public DashboardPage navigateToDashboardPg() 
+	{
+		Utility.sendkeys(uname, "kiran@gmail.com");
+		Utility.sendkeys(pass, "123456");
+		Utility.click(lgnBtn);
+		/*driver.findElement(By.id("email")).sendKeys("kiran@gmail.com");
+		driver.findElement(By.id("password")).sendKeys("123456");
+		driver.findElement(By.xpath("//button")).click();*/
+		return new DashboardPage(driver);
+	}
+	
+	public RegisterPage navigateToRegisterPg() 
+	{
+		Utility.sendkeys(uname, "kiran@gmail.com");
+		Utility.sendkeys(pass, "123456");
+		Utility.click(lgnBtn);
+		return new RegisterPage(driver);
 	}
 }

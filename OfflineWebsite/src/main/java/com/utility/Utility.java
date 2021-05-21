@@ -121,7 +121,8 @@ public class Utility
 		for (WebElement element : listWbEle)
 		{
 			element.click();
-			Thread.sleep(2000);
+			WaitUtility.sleep(2000);
+			//Thread.sleep(2000);
 		}
 	}
 	
@@ -283,6 +284,7 @@ public class Utility
 	
 
 	//***************************************#####****************************************//
+	
 	
 	public static ArrayList<String> dashboardPgNavMenu ()
 	{

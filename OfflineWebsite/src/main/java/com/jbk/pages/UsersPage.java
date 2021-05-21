@@ -199,4 +199,10 @@ public class UsersPage extends UsersPgObjRepo
 		else 	
 			return false ;
 	}
+	
+	public AddUserPage navigateToAddUserPg() 
+	{
+		Utility.click(addUserBtn);
+		return new AddUserPage(driver);
+	}
 }

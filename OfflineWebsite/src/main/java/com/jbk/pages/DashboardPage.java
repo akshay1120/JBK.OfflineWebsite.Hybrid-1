@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import com.jbk.objectRepository.DashboardPgObjRepo;
+import com.jbk.testbase.TestBase;
 import com.utility.ExcelUtility;
 import com.utility.Utility;
 import com.utility.WindowHandlingUtility;
@@ -22,7 +23,7 @@ public class DashboardPage extends DashboardPgObjRepo
 	
 	//1
 	public boolean url()
-	{
+	{	
 		String expectedUrl = "file:///C:/Offline%20Website/pages/examples/dashboard.html" ; 
 		String actualUrl = Utility.getCurrentUrl(driver);
 		
@@ -60,6 +61,7 @@ public class DashboardPage extends DashboardPgObjRepo
 	public boolean mainHeading() 
 	{
 		String actMainHeading = Utility.getText(mainHead);
+		TestBase.log.info("Utility.getText(mainHead)");
 		String expMainHeading = "Dashboard Courses Offered" ;
 		
 		if(actMainHeading.equals(expMainHeading))
@@ -342,5 +344,29 @@ public class DashboardPage extends DashboardPgObjRepo
 			return true ;
 		else 
 			return false ;
+	}
+	
+	public UsersPage navigateToUsersPg() 
+	{
+		Utility.click(users);
+		return new UsersPage(driver);
+	}
+	
+	public OperatorsPage navigateToOperatorsPg() 
+	{
+		Utility.click(operators);
+		return new OperatorsPage(driver);
+	}
+	
+	public UsefulLinksPage navigateToUsefulLinksPg() 
+	{
+		Utility.click(usefulLinks);
+		return new UsefulLinksPage(driver);
+	}
+	
+	public DownloadsPage navigateToDownloadsPg() 
+	{
+		Utility.click(downloads);
+		return new DownloadsPage(driver);
 	}
 }
