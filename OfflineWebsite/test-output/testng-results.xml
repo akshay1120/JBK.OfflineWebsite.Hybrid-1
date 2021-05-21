@@ -1,25 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="13" total="14" passed="1">
+<testng-results skipped="0" failed="1" ignored="7" total="8" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="81" started-at="2021-05-21T01:08:01Z" finished-at="2021-05-21T01:08:01Z">
+  <suite name="Default suite" duration-ms="76" started-at="2021-05-21T03:43:17Z" finished-at="2021-05-21T03:43:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="81" started-at="2021-05-21T01:08:01Z" finished-at="2021-05-21T01:08:01Z">
-      <class name="com.jbk.test.LoginTest">
-        <test-method status="PASS" signature="OpenBrowser()[pri:0, instance:com.jbk.test.LoginTest@369f73a2]" name="OpenBrowser" is-config="true" duration-ms="3841" started-at="2021-05-21T01:07:57Z" finished-at="2021-05-21T01:08:01Z">
+    <test name="Default test" duration-ms="76" started-at="2021-05-21T03:43:17Z" finished-at="2021-05-21T03:43:17Z">
+      <class name="com.jbk.test.RegisterTest">
+        <test-method status="PASS" signature="OpenBrowser()[pri:0, instance:com.jbk.test.RegisterTest@369f73a2]" name="OpenBrowser" is-config="true" duration-ms="3401" started-at="2021-05-21T03:43:14Z" finished-at="2021-05-21T03:43:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenBrowser -->
-        <test-method status="PASS" signature="verifyTitle()[pri:2, instance:com.jbk.test.LoginTest@369f73a2]" name="verifyTitle" duration-ms="25" started-at="2021-05-21T01:08:01Z" finished-at="2021-05-21T01:08:01Z">
+        <test-method status="FAIL" signature="verifyUrl()[pri:1, instance:com.jbk.test.RegisterTest@369f73a2]" name="verifyUrl" duration-ms="16" started-at="2021-05-21T03:43:17Z" finished-at="2021-05-21T03:43:17Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at com.jbk.test.RegisterTest.verifyUrl(RegisterTest.java:28)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTitle -->
-        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:com.jbk.test.LoginTest@369f73a2]" name="CloseBrowser" is-config="true" duration-ms="750" started-at="2021-05-21T01:08:01Z" finished-at="2021-05-21T01:08:02Z">
+        </test-method> <!-- verifyUrl -->
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:com.jbk.test.RegisterTest@369f73a2]" name="CloseBrowser" is-config="true" duration-ms="757" started-at="2021-05-21T03:43:17Z" finished-at="2021-05-21T03:43:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseBrowser -->
-      </class> <!-- com.jbk.test.LoginTest -->
+      </class> <!-- com.jbk.test.RegisterTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

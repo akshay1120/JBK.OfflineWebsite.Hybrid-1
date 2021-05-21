@@ -2,6 +2,7 @@ package com.utility;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
@@ -11,6 +12,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class ExcelUtility 
 {
+	
 	// To get data from particular Column..
 	public static ArrayList<String> getTableColData(String fileNm, String sheetNm, int colNo, int fromRow)throws Exception
 	{
@@ -56,7 +58,8 @@ public class ExcelUtility
 		return expData;
 	 }
 	 
-	 
+	
+	// To get data of complete sheet..
 	public static ArrayList<String> getTableData(String fileNm, String sheetNm)throws Exception
 	{
 		ArrayList<String> expData = new ArrayList<String>();
@@ -82,4 +85,26 @@ public class ExcelUtility
 		}
 		return expData;
 	 }
+	
+	
+	// To get data for login from particular columns..
+	public static  HashMap<String, String> readUnameAndPass(String fileNm, String sheetName, int unameCol, int passCol) throws Exception
+	{
+		HashMap<String, String> data= new HashMap<String, String>();
+		String path = System.getProperty("user.dir")+"/src/test/resources/"+fileNm;
+		FileInputStream fis = new FileInputStream(path);
+		Workbook wb = WorkbookFactory.create(fis);
+		Sheet sh = wb.getSheet(sheetName);
+		
+		int row= sh.getPhysicalNumberOfRows();
+		
+		for(int i=1;i<row;i++)
+		{	
+			DataFormatter df = new DataFormatter();
+			String uname =df.formatCellValue(sh.getRow(i).getCell(unameCol));
+			String pass =df.formatCellValue(sh.getRow(i).getCell(passCol));
+			data.put(uname, pass);		
+		}
+		return data;
+	}
 }

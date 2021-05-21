@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import com.jbk.pages.LoginPage;
 import com.jbk.testbase.TestBase;
+import com.utility.ExcelUtility;
 
 public class LoginTest extends TestBase
 {
@@ -106,6 +107,14 @@ public class LoginTest extends TestBase
 	{
 		Assert.assertTrue(lp.registerLink());
 	}
+	
+	@Test (priority=15)
+	public void loginWithAlldata()throws Exception
+	{
+		lp.loginWithAllData(ExcelUtility.readUnameAndPass("Data.xlsx", "LoginWithHeading", 0, 1));
+	}
+	
+	
 	
 	@AfterSuite
 	public void CloseBrowser()

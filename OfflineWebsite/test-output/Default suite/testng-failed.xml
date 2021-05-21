@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.jbk.test.LoginTest">
+      <class name="com.jbk.test.RegisterTest">
         <methods>
           <include name="verifyUrl"/>
-          <include name="CloseBrowser"/>
           <include name="OpenBrowser"/>
+          <include name="CloseBrowser"/>
         </methods>
-      </class> <!-- com.jbk.test.LoginTest -->
+      </class> <!-- com.jbk.test.RegisterTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

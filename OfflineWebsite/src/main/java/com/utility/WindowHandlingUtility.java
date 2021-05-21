@@ -9,12 +9,13 @@ import org.openqa.selenium.WebElement;
 
 public class WindowHandlingUtility 
 {
+	// 1 
 	public static String getWindowTitle(WebElement Element , WebDriver driver) throws Exception 
 	{
 		String parent = driver.getWindowHandle();
 		
 		Element.click();
-		Thread.sleep(3000);
+		WaitUtility.sleep(2000);
 		
 		String actWindowTitle = null ;
 	
@@ -33,12 +34,13 @@ public class WindowHandlingUtility
 		return actWindowTitle ;
 	}
 	
+	// 2
 	public static String getWindowUrl(WebElement Element , WebDriver driver) throws Exception 
 	{
 		String parent = driver.getWindowHandle();
 		
 		Element.click();
-		Thread.sleep(2000);
+		WaitUtility.sleep(2000);
 		
 		String actWindowUrl = null ;
 	
@@ -57,7 +59,7 @@ public class WindowHandlingUtility
 		return actWindowUrl ;
 	}
 	
-	
+	// 3
 	public static ArrayList <String> getWindowsUrls(List<WebElement> listWbEle , WebDriver driver) throws Exception 
 	{
 		ArrayList <String> actNewWindowUrls  = new ArrayList <String>();
@@ -67,8 +69,10 @@ public class WindowHandlingUtility
 		for (WebElement element : listWbEle)
 		{
 			element.click();
-			Thread.sleep(2000);
+			WaitUtility.sleep(1000);
 		}
+		
+		WaitUtility.explicitWaitWindow(10, listWbEle.size()+1);
 		
 		Set <String> allWindows = driver.getWindowHandles();
 		
@@ -87,6 +91,7 @@ public class WindowHandlingUtility
 		return actNewWindowUrls ;
 	}
 	
+	// 4
 	public static ArrayList <String> getWindowsTitles(List<WebElement> listWbEle , WebDriver driver) throws Exception 
 	{
 		ArrayList <String> actNewWindowTitles  = new ArrayList <String>();
@@ -96,8 +101,10 @@ public class WindowHandlingUtility
 		for (WebElement element : listWbEle)
 		{
 			element.click();
-			Thread.sleep(3000);
+			WaitUtility.sleep(2000);
 		}
+		
+		WaitUtility.explicitWaitWindow(10, listWbEle.size()+1);
 		
 		Set <String> allWindows = driver.getWindowHandles();
 		

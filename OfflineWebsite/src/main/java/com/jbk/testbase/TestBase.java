@@ -3,6 +3,7 @@ package com.jbk.testbase;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +11,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.jbk.pages.LoginPage;
-import com.utility.WaitUtility;
 
 public class TestBase  
 {
@@ -31,17 +31,18 @@ public class TestBase
 			System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe");
 			driver=new ChromeDriver();
 			driver.manage().window().maximize();
-			driver.get("file:///C:/Offline%20Website/index.html");
+			driver.get(prop.getProperty("url"));
 		}
 		else if(browserName.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "C:/geckodriver.exe");
 			driver=new FirefoxDriver();
 			driver.manage().window().maximize();
-			driver.get("file:///C:/Offline%20Website/index.html");
+			driver.get(prop.getProperty("url"));
 		}
 		
-		WaitUtility.implicitWait(10);
-		WaitUtility.waitForPageLoad(10);
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 		return driver;
 	}
 	

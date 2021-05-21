@@ -276,8 +276,10 @@ public class DashboardPage extends DashboardPgObjRepo
 		expNewWindowUrls.add("file:///C:/Offline%20Website/pages/pdf/python-syllabus.pdf");		
 		expNewWindowUrls.add("file:///C:/Offline%20Website/pages/pdf/java-j2ee-syllabus-jbk.pdf");
 		expNewWindowUrls.add("file:///C:/Offline%20Website/pages/pdf/selenium-testing-syllabus-jbk.pdf");
+		log.info(expNewWindowUrls);
 		
 		ArrayList <String> actNewWindowUrls  = WindowHandlingUtility.getWindowsUrls(moreInfo, driver);
+		log.info(actNewWindowUrls);
 		
 		if(actNewWindowUrls.equals(expNewWindowUrls))
 			return true ;

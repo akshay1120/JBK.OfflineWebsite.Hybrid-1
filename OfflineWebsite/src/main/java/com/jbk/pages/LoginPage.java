@@ -1,6 +1,8 @@
 package com.jbk.pages;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -236,6 +238,30 @@ public class LoginPage extends LginPgObjRepo
 			return false ;
 	}
 	
+	//15
+	public void loginWithAllData(HashMap<String,String> hm)
+	{	
+		Set<String> keys = hm.keySet();
+		for(String key :keys)
+		{
+			Utility.sendkeys(uname, key);
+			Utility.sendkeys(pass,hm.get(key));
+			Utility.click(lgnBtn);
+			
+			if(Utility.getTitle(driver).contains("Dashboard"))
+			{
+				log.info("Valid Data = Username : "+ key + "    Password :" + hm.get(key));
+				Utility.click(logout);
+			}
+			else
+			{
+				log.info("invalid Data = Username : "+ key + "    Password :" + hm.get(key));
+				Utility.clear(uname);
+				Utility.clear(pass);
+			}
+		}
+	}
+	
 	public DashboardPage navigateToDashboardPg() 
 	{
 		Utility.sendkeys(uname, "kiran@gmail.com");
@@ -249,9 +275,7 @@ public class LoginPage extends LginPgObjRepo
 	
 	public RegisterPage navigateToRegisterPg() 
 	{
-		Utility.sendkeys(uname, "kiran@gmail.com");
-		Utility.sendkeys(pass, "123456");
-		Utility.click(lgnBtn);
+		Utility.click(registerLink);
 		return new RegisterPage(driver);
 	}
 }
