@@ -1,5 +1,6 @@
 package com.utility;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
@@ -30,20 +31,27 @@ public class WaitUtility extends TestBase
 	}
 	
 	// 4
+	public static void explicitWaitListOfElements (long timeInSec , List<WebElement> elements)
+	{
+		WebDriverWait wait = new WebDriverWait (driver , timeInSec);
+		wait.until(ExpectedConditions.visibilityOfAllElements(elements));
+	}
+	
+	// 5
 	public static void explicitWaitAlert (long timeInSec)
 	{
 		WebDriverWait wait = new WebDriverWait (driver , timeInSec);
 		wait.until(ExpectedConditions.alertIsPresent());
 	}
 	
-	//5
+	// 6
 	public static void explicitWaitWindow (long timeInSec , int noOfWindows)
 	{
 		WebDriverWait wait = new WebDriverWait (driver , timeInSec);
 		wait.until(ExpectedConditions.numberOfWindowsToBe(noOfWindows));
 	}
 	
-	//6
+	// 7
 	public static void sleep (long timeInMillis) throws Exception
 	{
 		Thread.sleep(timeInMillis);

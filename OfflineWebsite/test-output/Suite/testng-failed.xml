@@ -8,6 +8,7 @@
           <include name="OpenBrowser"/>
           <include name="CloseBrowser"/>
           <include name="verifyClickGoExcel"/>
+          <include name="verifyClickGO"/>
         </methods>
       </class> <!-- com.jbk.test.UsefulLinksTest -->
     </classes>

@@ -3,15 +3,17 @@ package com.utility;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class SelectUtility 
+import com.jbk.testbase.TestBase;
+
+public class SelectUtility extends TestBase
 {
-	public void selectProductByText (WebElement element , String text)
+	public static void selectProductByText (WebElement element , String text)
 	{
 		Select sel = new Select(element);
 		sel.selectByVisibleText(text);
 	}
 	
-	public void selectProductByIndex (WebElement element , int index)
+	public static void selectProductByIndex (WebElement element , int index)
 	{
 		Select sel = new Select(element);
 		sel.selectByIndex(index);

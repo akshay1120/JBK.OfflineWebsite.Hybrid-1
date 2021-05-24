@@ -7,7 +7,9 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Utility 
+import com.jbk.testbase.TestBase;
+
+public class Utility extends TestBase
 {
 	WebDriver driver ;
 	
@@ -189,16 +191,16 @@ public class Utility
 	// 17
 	public static ArrayList <String> getCompleteSheetData(List<WebElement> ListWbEle1 , List<WebElement> ListWbEle2) 
 	{
-		ArrayList <String> actHead = new ArrayList <String>();
+		ArrayList <String> actData = new ArrayList <String>();
 		for (WebElement element : ListWbEle1)
 		{
-			actHead.add(element.getText());
+			actData.add(element.getText());
 		}
 		for (WebElement element : ListWbEle2)
 		{
-			actHead.add(element.getText());
+			actData.add(element.getText());
 		}
-		return actHead ;
+		return actData ;
 	}
 	
 	// 18

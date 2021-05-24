@@ -1,0 +1,61 @@
+2021-05-24 16:27:43,725  INFO [main] LoginTest:157 - verifying the Login Without Heading Excel Data
+2021-05-24 16:29:31,677  INFO [main] LoginTest:67 - Opening the browser
+2021-05-24 16:29:33,903  INFO [main] LoginTest:72 - Inserting the Url
+2021-05-24 16:29:35,738  INFO [main] LoginTest:39 - ***************************
+2021-05-24 16:29:35,745  INFO [main] LoginTest:40 - verifying the title
+2021-05-24 16:29:35,777  INFO [main] LoginTest:48 - ***************************
+2021-05-24 16:29:35,777  INFO [main] LoginTest:49 - verifying the logo
+2021-05-24 16:29:35,895  INFO [main] LoginTest:57 - ***************************
+2021-05-24 16:29:35,902  INFO [main] LoginTest:58 - verifying the MainHeading
+2021-05-24 16:29:35,963  INFO [main] LoginTest:66 - ***************************
+2021-05-24 16:29:35,968  INFO [main] LoginTest:67 - verifying the subHeading
+2021-05-24 16:29:36,036  INFO [main] LoginTest:75 - ***************************
+2021-05-24 16:29:36,040  INFO [main] LoginTest:76 - verifying the signInBoxHeading
+2021-05-24 16:29:36,093  INFO [main] LoginTest:84 - ***************************
+2021-05-24 16:29:36,093  INFO [main] LoginTest:85 - verifying the placeholders
+2021-05-24 16:29:36,190  INFO [main] LoginTest:93 - ***************************
+2021-05-24 16:29:36,198  INFO [main] LoginTest:94 - verifying the valid LogIn
+2021-05-24 16:29:38,279  INFO [main] LoginTest:102 - ***************************
+2021-05-24 16:29:38,279  INFO [main] LoginTest:103 - verifying the logout Successfully Message
+2021-05-24 16:29:38,352  INFO [main] LoginTest:111 - ***************************
+2021-05-24 16:29:38,357  INFO [main] LoginTest:112 - verifying the invalid LogIn
+2021-05-24 16:29:38,646  INFO [main] LoginTest:120 - ***************************
+2021-05-24 16:29:38,652  INFO [main] LoginTest:121 - verifying the invalid Log In Error Message
+2021-05-24 16:29:38,734  INFO [main] LoginTest:129 - ***************************
+2021-05-24 16:29:38,734  INFO [main] LoginTest:130 - verifying the blank Log In Error Message
+2021-05-24 16:29:39,016  INFO [main] LoginTest:138 - ***************************
+2021-05-24 16:29:39,016  INFO [main] LoginTest:139 - verifying the register Link Text
+2021-05-24 16:29:39,069  INFO [main] LoginTest:147 - ***************************
+2021-05-24 16:29:39,069  INFO [main] LoginTest:148 - verifying the register Link
+2021-05-24 16:29:39,471  INFO [main] LoginTest:156 - ***************************
+2021-05-24 16:29:39,474  INFO [main] LoginTest:157 - verifying the Login Without Heading Excel Data
+2021-05-24 16:31:50,840  INFO [main] LoginTest:67 - Opening the browser
+2021-05-24 16:31:53,011  INFO [main] LoginTest:72 - Inserting the Url
+2021-05-24 16:31:54,901  INFO [main] LoginTest:39 - ***************************
+2021-05-24 16:31:54,909  INFO [main] LoginTest:40 - verifying the title
+2021-05-24 16:31:54,942  INFO [main] LoginTest:48 - ***************************
+2021-05-24 16:31:54,942  INFO [main] LoginTest:49 - verifying the logo
+2021-05-24 16:31:55,038  INFO [main] LoginTest:57 - ***************************
+2021-05-24 16:31:55,043  INFO [main] LoginTest:58 - verifying the MainHeading
+2021-05-24 16:31:55,106  INFO [main] LoginTest:66 - ***************************
+2021-05-24 16:31:55,111  INFO [main] LoginTest:67 - verifying the subHeading
+2021-05-24 16:31:55,178  INFO [main] LoginTest:75 - ***************************
+2021-05-24 16:31:55,178  INFO [main] LoginTest:76 - verifying the signInBoxHeading
+2021-05-24 16:31:55,235  INFO [main] LoginTest:84 - ***************************
+2021-05-24 16:31:55,235  INFO [main] LoginTest:85 - verifying the placeholders
+2021-05-24 16:31:55,333  INFO [main] LoginTest:93 - ***************************
+2021-05-24 16:31:55,333  INFO [main] LoginTest:94 - verifying the valid LogIn
+2021-05-24 16:31:57,583  INFO [main] LoginTest:102 - ***************************
+2021-05-24 16:31:57,588  INFO [main] LoginTest:103 - verifying the logout Successfully Message
+2021-05-24 16:31:57,660  INFO [main] LoginTest:111 - ***************************
+2021-05-24 16:31:57,665  INFO [main] LoginTest:112 - verifying the invalid LogIn
+2021-05-24 16:31:57,969  INFO [main] LoginTest:120 - ***************************
+2021-05-24 16:31:57,974  INFO [main] LoginTest:121 - verifying the invalid Log In Error Message
+2021-05-24 16:31:58,050  INFO [main] LoginTest:129 - ***************************
+2021-05-24 16:31:58,054  INFO [main] LoginTest:130 - verifying the blank Log In Error Message
+2021-05-24 16:31:58,246  INFO [main] LoginTest:138 - ***************************
+2021-05-24 16:31:58,251  INFO [main] LoginTest:139 - verifying the register Link Text
+2021-05-24 16:31:58,299  INFO [main] LoginTest:147 - ***************************
+2021-05-24 16:31:58,301  INFO [main] LoginTest:148 - verifying the register Link
+2021-05-24 16:31:58,704  INFO [main] LoginTest:156 - ***************************
+2021-05-24 16:31:58,710  INFO [main] LoginTest:157 - verifying the Login Without Heading Excel Data

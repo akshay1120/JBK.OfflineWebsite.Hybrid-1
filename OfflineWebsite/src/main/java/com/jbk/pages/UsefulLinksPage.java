@@ -23,7 +23,7 @@ public class UsefulLinksPage extends UsefulLinksPgObjRepo
 	//1
 	public boolean clickGO() throws Exception
 	{
-		ArrayList<String>actData = WindowHandlingUtility.getWindowsTitles(clickCol, driver);
+		ArrayList<String>actData = WindowHandlingUtility.getWindowsTitles(clickCol);
 		
 		ArrayList <String>expData = new ArrayList <String>();
 		expData.add("Page not found | javabyKiran");
@@ -42,7 +42,7 @@ public class UsefulLinksPage extends UsefulLinksPgObjRepo
 	//2
 	public boolean clickGoExcel() throws Exception 
 	{
-		ArrayList <String>actData = WindowHandlingUtility.getWindowsTitles(clickCol, driver);;
+		ArrayList <String>actData = WindowHandlingUtility.getWindowsTitles(clickCol);;
 		
 		ArrayList <String>expData = ExcelUtility.getTableColData("Data.xlsx", "GoLinks", 0, 0);
 		

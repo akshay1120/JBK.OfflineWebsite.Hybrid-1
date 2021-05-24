@@ -10,7 +10,9 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
-public class ExcelUtility 
+import com.jbk.testbase.TestBase;
+
+public class ExcelUtility extends TestBase
 {
 	
 	// To get data from particular Column..
@@ -88,7 +90,7 @@ public class ExcelUtility
 	
 	
 	// To get data for login from particular columns..
-	public static  HashMap<String, String> readUnameAndPass(String fileNm, String sheetName, int unameCol, int passCol) throws Exception
+	public static  HashMap<String, String> readUnameAndPass(String fileNm, String sheetName, int unameCol, int passCol , int fromRow) throws Exception
 	{
 		HashMap<String, String> data= new HashMap<String, String>();
 		String path = System.getProperty("user.dir")+"/src/test/resources/"+fileNm;
@@ -98,7 +100,7 @@ public class ExcelUtility
 		
 		int row= sh.getPhysicalNumberOfRows();
 		
-		for(int i=1;i<row;i++)
+		for(int i=fromRow ; i<row ; i++)
 		{	
 			DataFormatter df = new DataFormatter();
 			String uname =df.formatCellValue(sh.getRow(i).getCell(unameCol));

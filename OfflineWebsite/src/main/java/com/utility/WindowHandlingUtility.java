@@ -7,10 +7,12 @@ import java.util.Set;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class WindowHandlingUtility 
+import com.jbk.testbase.TestBase;
+
+public class WindowHandlingUtility extends TestBase
 {
 	// 1 
-	public static String getWindowTitle(WebElement Element , WebDriver driver) throws Exception 
+	public static String getWindowTitle(WebElement Element) throws Exception 
 	{
 		String parent = driver.getWindowHandle();
 		
@@ -35,7 +37,7 @@ public class WindowHandlingUtility
 	}
 	
 	// 2
-	public static String getWindowUrl(WebElement Element , WebDriver driver) throws Exception 
+	public static String getWindowUrl(WebElement Element) throws Exception 
 	{
 		String parent = driver.getWindowHandle();
 		
@@ -60,7 +62,7 @@ public class WindowHandlingUtility
 	}
 	
 	// 3
-	public static ArrayList <String> getWindowsUrls(List<WebElement> listWbEle , WebDriver driver) throws Exception 
+	public static ArrayList <String> getWindowsUrls(List<WebElement> listWbEle ) throws Exception 
 	{
 		ArrayList <String> actNewWindowUrls  = new ArrayList <String>();
 
@@ -72,7 +74,7 @@ public class WindowHandlingUtility
 			WaitUtility.sleep(1000);
 		}
 		
-		WaitUtility.explicitWaitWindow(10, listWbEle.size()+1);
+		//WaitUtility.explicitWaitWindow(10, listWbEle.size()+1);
 		
 		Set <String> allWindows = driver.getWindowHandles();
 		
@@ -92,7 +94,7 @@ public class WindowHandlingUtility
 	}
 	
 	// 4
-	public static ArrayList <String> getWindowsTitles(List<WebElement> listWbEle , WebDriver driver) throws Exception 
+	public static ArrayList <String> getWindowsTitles(List<WebElement> listWbEle) throws Exception 
 	{
 		ArrayList <String> actNewWindowTitles  = new ArrayList <String>();
 
@@ -104,7 +106,7 @@ public class WindowHandlingUtility
 			WaitUtility.sleep(2000);
 		}
 		
-		WaitUtility.explicitWaitWindow(10, listWbEle.size()+1);
+		//WaitUtility.explicitWaitWindow(10, listWbEle.size()+1);
 		
 		Set <String> allWindows = driver.getWindowHandles();
 		

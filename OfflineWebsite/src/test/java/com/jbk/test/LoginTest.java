@@ -27,94 +27,137 @@ public class LoginTest extends TestBase
 	@Test (priority=1)
 	public void verifyUrl()
 	{
-		Assert.assertTrue(lp.url());
+		//LogT().info("***************************");
+		//LogT().info("verifying the url");
+		testLog = extent.createTest("verifyUrl");
+		Assert.assertTrue(lp.url(testLog));
 	}
 	
 	@Test (priority=2)
 	public void verifyTitle()
 	{
-		Assert.assertTrue(lp.title());
+		logT().info("***************************");
+		logT().info("verifying the title");
+		testLog = extent.createTest("verifyTitle");
+		Assert.assertTrue(lp.title(testLog));
 	}
 	
 	@Test (priority = 3)
 	public void verifyLogo()
 	{
-		Assert.assertTrue(lp.logo());
+		logT().info("***************************");
+		logT().info("verifying the logo");
+		testLog = extent.createTest("verifyLogo");
+		Assert.assertTrue(lp.logo(testLog));
 	}
 	
 	@Test (priority=4)
 	public void verifyMainHeading()
 	{
-		Assert.assertTrue(lp.mainHeading());
+		logT().info("***************************");
+		logT().info("verifying the MainHeading");
+		testLog = extent.createTest("verifyMainHeading");
+		Assert.assertTrue(lp.mainHeading(testLog));
 	}
 	
 	@Test (priority=5)
 	public void verifySubHeading()
 	{
-		Assert.assertTrue(lp.subHeading());
+		logT().info("***************************");
+		logT().info("verifying the subHeading");
+		testLog = extent.createTest("verifySubHeading");
+		Assert.assertTrue(lp.subHeading(testLog));
 	}
 	
 	@Test (priority=6)
 	public void verifySignInBoxHeading()
 	{
-		Assert.assertTrue(lp.signInBoxHeading());
+		logT().info("***************************");
+		logT().info("verifying the signInBoxHeading");
+		testLog = extent.createTest("verifySignInBoxHeading");
+		Assert.assertTrue(lp.signInBoxHeading(testLog));
 	}
 	
 	@Test (priority=7)
 	public void verifyPlaceholders()
 	{
-		Assert.assertTrue(lp.placeholders());
+		logT().info("***************************");
+		logT().info("verifying the placeholders");
+		testLog = extent.createTest("verifyPlaceholders");
+		Assert.assertTrue(lp.placeholders(testLog));
 	}
 	
 	@Test (priority=8)
 	public void verifyValidLogIn()
 	{
-		Assert.assertTrue(lp.validLogIn());
+		logT().info("***************************");
+		logT().info("verifying the valid LogIn");
+		testLog = extent.createTest("verifyValidLogIn");
+		Assert.assertTrue(lp.validLogIn(testLog));
 	}
 	
 	@Test (priority=9)
 	public void verifyLogoutSuccessfullyMessage()
 	{
-		Assert.assertTrue(lp.logoutSuccessfullyMessage());
+		logT().info("***************************");
+		logT().info("verifying the logout Successfully Message");
+		testLog = extent.createTest("verifyLogoutSuccessfullyMessage");
+		Assert.assertTrue(lp.logoutSuccessfullyMessage(testLog));
 	}
 	
 	@Test (priority=10)
 	public void verifyInvalidLogIn()
 	{
-		Assert.assertTrue(lp.invalidLogIn());
+		logT().info("***************************");
+		logT().info("verifying the invalid LogIn");
+		testLog = extent.createTest("verifyInvalidLogIn");
+		Assert.assertTrue(lp.invalidLogIn(testLog));
 	}
 	
 	@Test (priority=11)
 	public void verifyInvalidLogInErrorMessage()
 	{
-		Assert.assertTrue(lp.invalidLogInErrorMessage());
+		logT().info("***************************");
+		logT().info("verifying the invalid Log In Error Message");
+		testLog = extent.createTest("verifyInvalidLogInErrorMessage");
+		Assert.assertTrue(lp.invalidLogInErrorMessage(testLog));
 	}
 	
 	@Test (priority=12)
 	public void verifyBlankLogInErrorMessage()
 	{
-		Assert.assertTrue(lp.blankLogInErrorMessage());
+		logT().info("***************************");
+		logT().info("verifying the blank Log In Error Message");
+		testLog = extent.createTest("verifyBlankLogInErrorMessage");
+		Assert.assertTrue(lp.blankLogInErrorMessage(testLog));
 	}
 	
 	@Test (priority=13)
 	public void verifyRegisterLinkText()
 	{
-		Assert.assertTrue(lp.registerLinkText());
+		logT().info("***************************");
+		logT().info("verifying the register Link Text");
+		testLog = extent.createTest("verifyRegisterLinkText");
+		Assert.assertTrue(lp.registerLinkText(testLog));
 	}
 	
 	@Test (priority=14)
 	public void verifyRegisterLink()
 	{
-		Assert.assertTrue(lp.registerLink());
+		logT().info("***************************");
+		logT().info("verifying the register Link");
+		testLog = extent.createTest("verifyRegisterLink");
+		Assert.assertTrue(lp.registerLink(testLog));
 	}
 	
 	@Test (priority=15)
 	public void loginWithAlldata()throws Exception
 	{
-		lp.loginWithAllData(ExcelUtility.readUnameAndPass("Data.xlsx", "LoginWithHeading", 0, 1));
+		logT().info("***************************");
+		logT().info("verifying the Login Without Heading Excel Data");
+		testLog = extent.createTest("loginWithAlldata");
+		lp.loginWithAllData(ExcelUtility.readUnameAndPass("Data.xlsx", "LoginWithoutHeading", 0, 1 , 0),testLog);
 	}
-	
-	
 	
 	@AfterSuite
 	public void CloseBrowser()
