@@ -27,9 +27,9 @@ public class LoginTest extends TestBase
 	@Test (priority=1)
 	public void verifyUrl()
 	{
-		//LogT().info("***************************");
-		//LogT().info("verifying the url");
-		testLog = extent.createTest("verifyUrl");
+		logT().info("*********************************************************");
+		logT().info("verifying the url");
+		testLog = extent.createTest("verifying the url");
 		Assert.assertTrue(lp.url(testLog));
 	}
 	
@@ -38,7 +38,7 @@ public class LoginTest extends TestBase
 	{
 		logT().info("***************************");
 		logT().info("verifying the title");
-		testLog = extent.createTest("verifyTitle");
+		testLog = extent.createTest("verifying the title");
 		Assert.assertTrue(lp.title(testLog));
 	}
 	
@@ -47,7 +47,7 @@ public class LoginTest extends TestBase
 	{
 		logT().info("***************************");
 		logT().info("verifying the logo");
-		testLog = extent.createTest("verifyLogo");
+		testLog = extent.createTest("verifying the logo");
 		Assert.assertTrue(lp.logo(testLog));
 	}
 	
@@ -56,7 +56,7 @@ public class LoginTest extends TestBase
 	{
 		logT().info("***************************");
 		logT().info("verifying the MainHeading");
-		testLog = extent.createTest("verifyMainHeading");
+		testLog = extent.createTest("verifying the MainHeading");
 		Assert.assertTrue(lp.mainHeading(testLog));
 	}
 	
@@ -65,7 +65,7 @@ public class LoginTest extends TestBase
 	{
 		logT().info("***************************");
 		logT().info("verifying the subHeading");
-		testLog = extent.createTest("verifySubHeading");
+		testLog = extent.createTest("verifying the subHeading");
 		Assert.assertTrue(lp.subHeading(testLog));
 	}
 	
@@ -74,7 +74,7 @@ public class LoginTest extends TestBase
 	{
 		logT().info("***************************");
 		logT().info("verifying the signInBoxHeading");
-		testLog = extent.createTest("verifySignInBoxHeading");
+		testLog = extent.createTest("verifying the signInBoxHeading");
 		Assert.assertTrue(lp.signInBoxHeading(testLog));
 	}
 	
@@ -83,7 +83,7 @@ public class LoginTest extends TestBase
 	{
 		logT().info("***************************");
 		logT().info("verifying the placeholders");
-		testLog = extent.createTest("verifyPlaceholders");
+		testLog = extent.createTest("verifying the placeholders");
 		Assert.assertTrue(lp.placeholders(testLog));
 	}
 	
@@ -92,7 +92,7 @@ public class LoginTest extends TestBase
 	{
 		logT().info("***************************");
 		logT().info("verifying the valid LogIn");
-		testLog = extent.createTest("verifyValidLogIn");
+		testLog = extent.createTest("verifying the valid LogIn");
 		Assert.assertTrue(lp.validLogIn(testLog));
 	}
 	
@@ -101,7 +101,7 @@ public class LoginTest extends TestBase
 	{
 		logT().info("***************************");
 		logT().info("verifying the logout Successfully Message");
-		testLog = extent.createTest("verifyLogoutSuccessfullyMessage");
+		testLog = extent.createTest("verifying the logout Successfully Message");
 		Assert.assertTrue(lp.logoutSuccessfullyMessage(testLog));
 	}
 	
@@ -110,7 +110,7 @@ public class LoginTest extends TestBase
 	{
 		logT().info("***************************");
 		logT().info("verifying the invalid LogIn");
-		testLog = extent.createTest("verifyInvalidLogIn");
+		testLog = extent.createTest("verifying the invalid LogIn");
 		Assert.assertTrue(lp.invalidLogIn(testLog));
 	}
 	
@@ -119,7 +119,7 @@ public class LoginTest extends TestBase
 	{
 		logT().info("***************************");
 		logT().info("verifying the invalid Log In Error Message");
-		testLog = extent.createTest("verifyInvalidLogInErrorMessage");
+		testLog = extent.createTest("verifying the invalid Log In Error Message");
 		Assert.assertTrue(lp.invalidLogInErrorMessage(testLog));
 	}
 	
@@ -128,7 +128,7 @@ public class LoginTest extends TestBase
 	{
 		logT().info("***************************");
 		logT().info("verifying the blank Log In Error Message");
-		testLog = extent.createTest("verifyBlankLogInErrorMessage");
+		testLog = extent.createTest("verifying the blank Log In Error Message");
 		Assert.assertTrue(lp.blankLogInErrorMessage(testLog));
 	}
 	
@@ -137,7 +137,7 @@ public class LoginTest extends TestBase
 	{
 		logT().info("***************************");
 		logT().info("verifying the register Link Text");
-		testLog = extent.createTest("verifyRegisterLinkText");
+		testLog = extent.createTest("verifying the register Link Text");
 		Assert.assertTrue(lp.registerLinkText(testLog));
 	}
 	
@@ -146,7 +146,7 @@ public class LoginTest extends TestBase
 	{
 		logT().info("***************************");
 		logT().info("verifying the register Link");
-		testLog = extent.createTest("verifyRegisterLink");
+		testLog = extent.createTest("verifying the register Link");
 		Assert.assertTrue(lp.registerLink(testLog));
 	}
 	
@@ -155,7 +155,7 @@ public class LoginTest extends TestBase
 	{
 		logT().info("***************************");
 		logT().info("verifying the Login Without Heading Excel Data");
-		testLog = extent.createTest("loginWithAlldata");
+		testLog = extent.createTest("verifying the Login Without Heading Excel Data");
 		lp.loginWithAllData(ExcelUtility.readUnameAndPass("Data.xlsx", "LoginWithoutHeading", 0, 1 , 0),testLog);
 	}
 	

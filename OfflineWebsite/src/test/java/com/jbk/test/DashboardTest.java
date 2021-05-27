@@ -7,157 +7,206 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import com.jbk.pages.DashboardPage;
+import com.jbk.pages.LoginPage;
 import com.jbk.testbase.TestBase;
 
 public class DashboardTest extends TestBase
 {
 	WebDriver driver ;
 	DashboardPage dp = null ;
+	LoginPage lp = null ;
 	
 	@BeforeSuite
 	public void OpenBrowser () throws Exception 
 	{
 		driver = initialization();
-		dp = navigateToLoginPg().navigateToDashboardPg();
+		lp = new LoginPage(driver);
+		dp = lp.navigateToDashboardPg();
 		dp = new DashboardPage(driver);
 	}
 	
 	@Test (priority=1)
 	public void verifyUrl()
 	{
-		Assert.assertTrue(dp.url());
+		logT().info("verifying the url");
+		testLog = extent.createTest("verifying the url");
+		Assert.assertTrue(dp.url(testLog));
 	}
 	
 	@Test (priority=2)
 	public void verifyTitle()
 	{
-		Assert.assertTrue(dp.title());
+		logT().info("verifying the Title");
+		testLog = extent.createTest("verifying the Title");
+		Assert.assertTrue(dp.title(testLog));
 	}
 	
 	@Test (priority=3)
 	public void verifyCornerHeading () 
 	{
-		Assert.assertTrue(dp.cornerHeading());
+		logT().info("verifying the Corner Heading");
+		testLog = extent.createTest("verifying the Corner Heading");
+		Assert.assertTrue(dp.cornerHeading(testLog));
 	}
 	
 	@Test (priority=4)
 	public void verifyMainHeading() 
 	{
-		Assert.assertTrue(dp.mainHeading());
+		logT().info("verifying the Main Heading");
+		testLog = extent.createTest("verifying the Main Heading");
+		Assert.assertTrue(dp.mainHeading(testLog));
 	}
 	
 	@Test (priority=5)
 	public void verifyUserImage() 
 	{
-		Assert.assertTrue(dp.userImage());
+		logT().info("verifying the User Image");
+		testLog = extent.createTest("verifying the User Image");
+		Assert.assertTrue(dp.userImage(testLog));
 	}
 	
 	@Test (priority=6)
 	public void verifyUserName () 
 	{
-		Assert.assertTrue(dp.userName());
+		logT().info("verifying the User Name");
+		testLog = extent.createTest("verifying the User Name");
+		Assert.assertTrue(dp.userName(testLog));
 	}
 	
 	@Test (priority=7)
 	public void verifyUserStatus () 
 	{
-		Assert.assertTrue(dp.userStatus());
+		logT().info("verifying the User Status");
+		testLog = extent.createTest("verifying the User Status");
+		Assert.assertTrue(dp.userStatus(testLog));
 	}
 	
 	@Test (priority=8)
 	public void verifynavigationMenuText () 
 	{
-		Assert.assertTrue(dp.navigationMenuText());
+		logT().info("verifying the navigation Menu Text");
+		testLog = extent.createTest("verifying the navigation Menu Text");
+		Assert.assertTrue(dp.navigationMenuText(testLog));
 	}
 	
 	@Test (priority=9)
 	public void verifyUsersMenu() 
 	{
-		Assert.assertTrue(dp.usersMenu());
+		logT().info("verifying the Users Menu");
+		testLog = extent.createTest("verifying the Users Menu");
+		Assert.assertTrue(dp.usersMenu(testLog));
 	}
 	
 	@Test (priority=10)
 	public void verifyOperatorsMenu () 
 	{
-		Assert.assertTrue(dp.operatorsMenu());
+		logT().info("verifying the Operators Menu");
+		testLog = extent.createTest("verifying the Operators Menu");
+		Assert.assertTrue(dp.operatorsMenu(testLog));
 	}
 	
 	@Test (priority=11)
 	public void verifyUsefulLinksMenu() 
 	{
-		Assert.assertTrue(dp.usefulLinksMenu());
+		logT().info("verifying the Useful Links Menu");
+		testLog = extent.createTest("verifying the Useful Links Menu");
+		Assert.assertTrue(dp.usefulLinksMenu(testLog));
 	}
 	
 	@Test (priority=12)
 	public void verifyDownloadsMenu () 
 	{
-		Assert.assertTrue(dp.downloadsMenu());
+		logT().info("verifying the Downloads Menu");
+		testLog = extent.createTest("verifying the Downloads Menu");
+		Assert.assertTrue(dp.downloadsMenu(testLog));
 	}
 	
 	@Test (priority=13)
 	public void verifyLeftCornerLogOutMenu() 
 	{
-		Assert.assertTrue(dp.leftCornerLogOutMenu());
+		logT().info("verifying the Left Corner Log Out Menu");
+		testLog = extent.createTest("verifying the Left Corner Log Out Menu");
+		Assert.assertTrue(dp.leftCornerLogOutMenu(testLog));
 	}
 	
 	@Test (priority=14)
 	public void verifyRightCornerLogOutLink() 
 	{
-		Assert.assertTrue(dp.verifyRightCornerLogOutLink());
+		logT().info("verifying the Left Corner Log Out Link");
+		testLog = extent.createTest("verifying the Left Corner Log Out Link");
+		Assert.assertTrue(dp.rightCornerLogOutLink(testLog));
 	}
 	
 	@Test (priority=15)
 	public void verifyCoursesHeading () 
 	{
-		Assert.assertTrue(dp.coursesHeading());
+		logT().info("verifying the Courses Headings");
+		testLog = extent.createTest("verifying the Courses Headings");
+		Assert.assertTrue(dp.coursesHeading(testLog));
 	}
 	
 	@Test (priority=16)
 	public void verifyCoursesSubHeading () 
 	{
-		Assert.assertTrue(dp.coursesSubHeading());
+		logT().info("verifying the Courses Sub Headings");
+		testLog = extent.createTest("verifying the Courses Sub Headings");
+		Assert.assertTrue(dp.coursesSubHeading(testLog));
 	}
 	
 	@Test (priority=17)
 	public void verifyCoursesMoreInfo() 
 	{
-		Assert.assertTrue(dp.coursesMoreInfo());
+		logT().info("verifying the Courses More Info Text");
+		testLog = extent.createTest("verifying the Courses More Info Text");
+		Assert.assertTrue(dp.coursesMoreInfo(testLog));
 	}
 	
 	@Test (priority=18)
 	public void verifyMoreInfoNewWindow () throws Exception 
 	{
-		Assert.assertTrue(dp.moreInfoNewWindow());
+		logT().info("verifying the Courses More Info Links");
+		testLog = extent.createTest("verifying the Courses More Info Links");
+		Assert.assertTrue(dp.moreInfoNewWindow(testLog));
 	}
 	
 	@Test (priority=19)
 	public void verifyFooterStatement () 
 	{
-		Assert.assertTrue(dp.footerStatement());
+		logT().info("verifying the Footer Statement");
+		testLog = extent.createTest("verifying the Footer Statement");
+		Assert.assertTrue(dp.footerStatement(testLog));
 	}
 	
 	@Test (priority=20)
 	public void verifyJBK_Link () throws Exception 
 	{
-		Assert.assertTrue(dp.jbk_Link());
+		logT().info("verifying the JBK_Link present at footer");
+		testLog = extent.createTest("verifying the JBK_Link present at footer");
+		Assert.assertTrue(dp.jbk_Link(testLog));
 	}
 	
 	@Test (priority=21)
 	public void verifySequence () 
 	{
-		Assert.assertTrue(dp.sequence());
+		logT().info("verifying Sequence of Windows Text");
+		testLog = extent.createTest("verifying Sequence of Windows Text");
+		Assert.assertTrue(dp.sequence(testLog));
 	}
 	
 	@Test (priority=22)
 	public void verifyCourseHeading () throws Exception 
 	{
-		Assert.assertTrue(dp.courseHeadingExcel());
+		logT().info("verifying the Course Heading using Excel");
+		testLog = extent.createTest("verifying the Course Heading using Excel");
+		Assert.assertTrue(dp.courseHeadingExcel(testLog));
 	}
 	
 	@Test (priority=23)
 	public void verifyCourseSubHeading () throws Exception 
 	{
-		Assert.assertTrue(dp.courseSubHeadingExcel());
+		logT().info("verifying the Course Sub Heading using Excel");
+		testLog = extent.createTest("verifying the Course Sub Heading using Excel");
+		Assert.assertTrue(dp.courseSubHeadingExcel(testLog));
 	}
 	
 	@AfterSuite

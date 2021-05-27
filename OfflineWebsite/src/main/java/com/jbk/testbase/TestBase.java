@@ -28,13 +28,14 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.jbk.pages.LoginPage;
 
 public class TestBase 
 {
 	public static WebDriver driver ;
 	public static Properties prop ;
 	public static Logger logger ;
+	
+	// Metthod to create log4j file for pages ..
 	
 	public Logger logT()
 	{
@@ -44,6 +45,8 @@ public class TestBase
 		return logger ;
 	}
 	
+	// Metthod to create log4j file for tests ..
+	
 	public Logger logP()
 	{
 		logger = Logger.getLogger(this.getClass());
@@ -51,6 +54,8 @@ public class TestBase
 		PropertyConfigurator.configure(path);
 		return logger ;
 	}
+	
+	// Metthod to initialize the driver ..
 	
 	public WebDriver initialization() throws IOException 
 	{
@@ -92,11 +97,15 @@ public class TestBase
 		return driver;
 	}
 	
-	public LoginPage navigateToLoginPg()
+	// Navigate to LoginPage..
+	
+	/*public LoginPage navigateToLoginPg()
 	{
 		LoginPage lp = new LoginPage(driver);
 		return lp ;
-	}
+	}*/
+	
+	// Extent Report..
 	
 	 public ExtentHtmlReporter htmlReporter;
 	 public ExtentReports extent;
@@ -107,16 +116,15 @@ public class TestBase
 	 {
 		  htmlReporter= new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/ExtentReport/MyReport.html");
 		  
-		  htmlReporter.config().setDocumentTitle("Automation Test Report");
-		  htmlReporter.config().setReportName("OrangeHRM Test Automation Report");
-		  htmlReporter.config().setTheme(Theme.DARK);
+		  htmlReporter.config().setDocumentTitle("JBK");
+		  htmlReporter.config().setReportName("JBK Offline Website");
+		  htmlReporter.config().setTheme(Theme.STANDARD);
 		  
 		  extent = new ExtentReports();
 		  extent.attachReporter(htmlReporter);
 		  
-		  extent.setSystemInfo("HostName", "MyHost");
-		  extent.setSystemInfo("ProjectName", "OrangeHRM");
-		  extent.setSystemInfo("Tester", "Hitendra");
+		  extent.setSystemInfo("ProjectName", "Offline Website");
+		  extent.setSystemInfo("Tester", "Akshay Jain");
 		  extent.setSystemInfo("OS", "Win10");
 		  extent.setSystemInfo("Browser", "Chrome");
 	 }
@@ -146,6 +154,8 @@ public class TestBase
 			  testLog.log(Status.PASS, "Pass Test case is: "+result.getName());
 		  }
 	 } 
+	 
+	 // Method to capture ScreenShot..
 	 
 	 public static String screenShot(WebDriver driver,String filename) 
 	 {

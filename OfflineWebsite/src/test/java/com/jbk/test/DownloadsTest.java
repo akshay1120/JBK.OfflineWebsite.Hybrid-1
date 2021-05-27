@@ -9,18 +9,21 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import com.jbk.pages.DownloadsPage;
+import com.jbk.pages.LoginPage;
 import com.jbk.testbase.TestBase;
 
 public class DownloadsTest extends TestBase
 {
 	WebDriver driver ;
 	DownloadsPage dpg = null ;
+	LoginPage lp = null ;
 	
 	@BeforeSuite
 	public void OpenBrowser () throws IOException
 	{
 		driver = initialization();
-		dpg = navigateToLoginPg().navigateToDashboardPg().navigateToDownloadsPg();
+		lp = new LoginPage(driver);
+		dpg = lp.navigateToDashboardPg().navigateToDownloadsPg();
 		dpg = new DownloadsPage(driver);
 	}
 	

@@ -3,7 +3,9 @@ package com.jbk.objectRepository;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AddUserPgObjRepo 
+import com.jbk.testbase.TestBase;
+
+public class AddUserPgObjRepo extends TestBase
 {	
 	@FindBy(xpath = "//span[text()='Users']")
 	public WebElement users;

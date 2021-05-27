@@ -3,15 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.jbk.test.LoginTest">
+      <class name="com.jbk.test.UsersTest">
         <methods>
-          <include name="verifyUrl"/>
-          <include name="endReport"/>
-          <include name="setExtent"/>
           <include name="CloseBrowser"/>
+          <include name="verifyHeadingsAl"/>
           <include name="OpenBrowser"/>
         </methods>
-      </class> <!-- com.jbk.test.LoginTest -->
+      </class> <!-- com.jbk.test.UsersTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

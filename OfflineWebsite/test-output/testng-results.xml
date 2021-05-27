@@ -1,254 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="15" passed="15">
+<testng-results skipped="0" failed="1" ignored="9" total="10" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7467" started-at="2021-05-24T11:01:54Z" finished-at="2021-05-24T11:02:02Z">
+  <suite name="Default suite" duration-ms="29" started-at="2021-05-26T19:22:33Z" finished-at="2021-05-26T19:22:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7467" started-at="2021-05-24T11:01:54Z" finished-at="2021-05-24T11:02:02Z">
-      <class name="com.jbk.test.LoginTest">
-        <test-method status="PASS" signature="setExtent()[pri:0, instance:com.jbk.test.LoginTest@31ef45e3]" name="setExtent" is-config="true" duration-ms="186" started-at="2021-05-24T11:01:50Z" finished-at="2021-05-24T11:01:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setExtent -->
-        <test-method status="PASS" signature="OpenBrowser()[pri:0, instance:com.jbk.test.LoginTest@31ef45e3]" name="OpenBrowser" is-config="true" duration-ms="3993" started-at="2021-05-24T11:01:50Z" depends-on-methods="com.jbk.testbase.TestBase.setExtent" finished-at="2021-05-24T11:01:54Z">
+    <test name="Default test" duration-ms="29" started-at="2021-05-26T19:22:33Z" finished-at="2021-05-26T19:22:33Z">
+      <class name="com.jbk.test.UsersTest">
+        <test-method status="PASS" signature="OpenBrowser()[pri:0, instance:com.jbk.test.UsersTest@57fffcd7]" name="OpenBrowser" is-config="true" duration-ms="4389" started-at="2021-05-26T19:22:29Z" finished-at="2021-05-26T19:22:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenBrowser -->
-        <test-method status="PASS" signature="verifyUrl()[pri:1, instance:com.jbk.test.LoginTest@31ef45e3]" name="verifyUrl" duration-ms="45" started-at="2021-05-24T11:01:54Z" finished-at="2021-05-24T11:01:54Z">
+        <test-method status="FAIL" signature="verifyHeadingsAl()[pri:1, instance:com.jbk.test.UsersTest@57fffcd7]" name="verifyHeadingsAl" duration-ms="3" started-at="2021-05-26T19:22:33Z" finished-at="2021-05-26T19:22:33Z">
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problem: 
+testLog cannot be resolved to a variable
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problem: 
+testLog cannot be resolved to a variable
+
+at com.jbk.test.UsersTest.verifyHeadingsAl(UsersTest.java:31)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUrl -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.jbk.test.LoginTest@31ef45e3]" name="tearDown" is-config="true" duration-ms="5" started-at="2021-05-24T11:01:54Z" finished-at="2021-05-24T11:01:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyUrl status=SUCCESS method=LoginTest.verifyUrl()[pri:1, instance:com.jbk.test.LoginTest@31ef45e3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="verifyTitle()[pri:2, instance:com.jbk.test.LoginTest@31ef45e3]" name="verifyTitle" duration-ms="35" started-at="2021-05-24T11:01:54Z" finished-at="2021-05-24T11:01:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTitle -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.jbk.test.LoginTest@31ef45e3]" name="tearDown" is-config="true" duration-ms="0" started-at="2021-05-24T11:01:54Z" finished-at="2021-05-24T11:01:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyTitle status=SUCCESS method=LoginTest.verifyTitle()[pri:2, instance:com.jbk.test.LoginTest@31ef45e3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="verifyLogo()[pri:3, instance:com.jbk.test.LoginTest@31ef45e3]" name="verifyLogo" duration-ms="94" started-at="2021-05-24T11:01:54Z" finished-at="2021-05-24T11:01:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLogo -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.jbk.test.LoginTest@31ef45e3]" name="tearDown" is-config="true" duration-ms="0" started-at="2021-05-24T11:01:55Z" finished-at="2021-05-24T11:01:55Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyLogo status=SUCCESS method=LoginTest.verifyLogo()[pri:3, instance:com.jbk.test.LoginTest@31ef45e3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="verifyMainHeading()[pri:4, instance:com.jbk.test.LoginTest@31ef45e3]" name="verifyMainHeading" duration-ms="60" started-at="2021-05-24T11:01:55Z" finished-at="2021-05-24T11:01:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyMainHeading -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.jbk.test.LoginTest@31ef45e3]" name="tearDown" is-config="true" duration-ms="0" started-at="2021-05-24T11:01:55Z" finished-at="2021-05-24T11:01:55Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyMainHeading status=SUCCESS method=LoginTest.verifyMainHeading()[pri:4, instance:com.jbk.test.LoginTest@31ef45e3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="verifySubHeading()[pri:5, instance:com.jbk.test.LoginTest@31ef45e3]" name="verifySubHeading" duration-ms="61" started-at="2021-05-24T11:01:55Z" finished-at="2021-05-24T11:01:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySubHeading -->
-        <test-method status="PASS" signature="verifySignInBoxHeading()[pri:6, instance:com.jbk.test.LoginTest@31ef45e3]" name="verifySignInBoxHeading" duration-ms="57" started-at="2021-05-24T11:01:55Z" finished-at="2021-05-24T11:01:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySignInBoxHeading -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.jbk.test.LoginTest@31ef45e3]" name="tearDown" is-config="true" duration-ms="0" started-at="2021-05-24T11:01:55Z" finished-at="2021-05-24T11:01:55Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifySubHeading status=SUCCESS method=LoginTest.verifySubHeading()[pri:5, instance:com.jbk.test.LoginTest@31ef45e3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="verifyPlaceholders()[pri:7, instance:com.jbk.test.LoginTest@31ef45e3]" name="verifyPlaceholders" duration-ms="96" started-at="2021-05-24T11:01:55Z" finished-at="2021-05-24T11:01:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyPlaceholders -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.jbk.test.LoginTest@31ef45e3]" name="tearDown" is-config="true" duration-ms="0" started-at="2021-05-24T11:01:55Z" finished-at="2021-05-24T11:01:55Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifySignInBoxHeading status=SUCCESS method=LoginTest.verifySignInBoxHeading()[pri:6, instance:com.jbk.test.LoginTest@31ef45e3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="verifyValidLogIn()[pri:8, instance:com.jbk.test.LoginTest@31ef45e3]" name="verifyValidLogIn" duration-ms="2248" started-at="2021-05-24T11:01:55Z" finished-at="2021-05-24T11:01:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyValidLogIn -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.jbk.test.LoginTest@31ef45e3]" name="tearDown" is-config="true" duration-ms="0" started-at="2021-05-24T11:01:55Z" finished-at="2021-05-24T11:01:55Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyPlaceholders status=SUCCESS method=LoginTest.verifyPlaceholders()[pri:7, instance:com.jbk.test.LoginTest@31ef45e3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.jbk.test.LoginTest@31ef45e3]" name="tearDown" is-config="true" duration-ms="0" started-at="2021-05-24T11:01:57Z" finished-at="2021-05-24T11:01:57Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyValidLogIn status=SUCCESS method=LoginTest.verifyValidLogIn()[pri:8, instance:com.jbk.test.LoginTest@31ef45e3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="verifyLogoutSuccessfullyMessage()[pri:9, instance:com.jbk.test.LoginTest@31ef45e3]" name="verifyLogoutSuccessfullyMessage" duration-ms="70" started-at="2021-05-24T11:01:57Z" finished-at="2021-05-24T11:01:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLogoutSuccessfullyMessage -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.jbk.test.LoginTest@31ef45e3]" name="tearDown" is-config="true" duration-ms="2" started-at="2021-05-24T11:01:57Z" finished-at="2021-05-24T11:01:57Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyLogoutSuccessfullyMessage status=SUCCESS method=LoginTest.verifyLogoutSuccessfullyMessage()[pri:9, instance:com.jbk.test.LoginTest@31ef45e3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="verifyInvalidLogIn()[pri:10, instance:com.jbk.test.LoginTest@31ef45e3]" name="verifyInvalidLogIn" duration-ms="307" started-at="2021-05-24T11:01:57Z" finished-at="2021-05-24T11:01:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyInvalidLogIn -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.jbk.test.LoginTest@31ef45e3]" name="tearDown" is-config="true" duration-ms="0" started-at="2021-05-24T11:01:57Z" finished-at="2021-05-24T11:01:57Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyInvalidLogIn status=SUCCESS method=LoginTest.verifyInvalidLogIn()[pri:10, instance:com.jbk.test.LoginTest@31ef45e3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="verifyInvalidLogInErrorMessage()[pri:11, instance:com.jbk.test.LoginTest@31ef45e3]" name="verifyInvalidLogInErrorMessage" duration-ms="80" started-at="2021-05-24T11:01:57Z" finished-at="2021-05-24T11:01:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyInvalidLogInErrorMessage -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.jbk.test.LoginTest@31ef45e3]" name="tearDown" is-config="true" duration-ms="0" started-at="2021-05-24T11:01:58Z" finished-at="2021-05-24T11:01:58Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyInvalidLogInErrorMessage status=SUCCESS method=LoginTest.verifyInvalidLogInErrorMessage()[pri:11, instance:com.jbk.test.LoginTest@31ef45e3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="verifyBlankLogInErrorMessage()[pri:12, instance:com.jbk.test.LoginTest@31ef45e3]" name="verifyBlankLogInErrorMessage" duration-ms="192" started-at="2021-05-24T11:01:58Z" finished-at="2021-05-24T11:01:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyBlankLogInErrorMessage -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.jbk.test.LoginTest@31ef45e3]" name="tearDown" is-config="true" duration-ms="0" started-at="2021-05-24T11:01:58Z" finished-at="2021-05-24T11:01:58Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyBlankLogInErrorMessage status=SUCCESS method=LoginTest.verifyBlankLogInErrorMessage()[pri:12, instance:com.jbk.test.LoginTest@31ef45e3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="verifyRegisterLinkText()[pri:13, instance:com.jbk.test.LoginTest@31ef45e3]" name="verifyRegisterLinkText" duration-ms="43" started-at="2021-05-24T11:01:58Z" finished-at="2021-05-24T11:01:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyRegisterLinkText -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.jbk.test.LoginTest@31ef45e3]" name="tearDown" is-config="true" duration-ms="5" started-at="2021-05-24T11:01:58Z" finished-at="2021-05-24T11:01:58Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyRegisterLinkText status=SUCCESS method=LoginTest.verifyRegisterLinkText()[pri:13, instance:com.jbk.test.LoginTest@31ef45e3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="verifyRegisterLink()[pri:14, instance:com.jbk.test.LoginTest@31ef45e3]" name="verifyRegisterLink" duration-ms="402" started-at="2021-05-24T11:01:58Z" finished-at="2021-05-24T11:01:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyRegisterLink -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.jbk.test.LoginTest@31ef45e3]" name="tearDown" is-config="true" duration-ms="0" started-at="2021-05-24T11:01:58Z" finished-at="2021-05-24T11:01:58Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyRegisterLink status=SUCCESS method=LoginTest.verifyRegisterLink()[pri:14, instance:com.jbk.test.LoginTest@31ef45e3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="loginWithAlldata()[pri:15, instance:com.jbk.test.LoginTest@31ef45e3]" name="loginWithAlldata" duration-ms="3578" started-at="2021-05-24T11:01:58Z" finished-at="2021-05-24T11:02:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithAlldata -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.jbk.test.LoginTest@31ef45e3]" name="tearDown" is-config="true" duration-ms="0" started-at="2021-05-24T11:02:02Z" finished-at="2021-05-24T11:02:02Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=loginWithAlldata status=SUCCESS method=LoginTest.loginWithAlldata()[pri:15, instance:com.jbk.test.LoginTest@31ef45e3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:com.jbk.test.LoginTest@31ef45e3]" name="CloseBrowser" is-config="true" duration-ms="757" started-at="2021-05-24T11:02:02Z" finished-at="2021-05-24T11:02:03Z">
+        </test-method> <!-- verifyHeadingsAl -->
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:com.jbk.test.UsersTest@57fffcd7]" name="CloseBrowser" is-config="true" duration-ms="672" started-at="2021-05-26T19:22:33Z" finished-at="2021-05-26T19:22:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseBrowser -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:com.jbk.test.LoginTest@31ef45e3]" name="endReport" is-config="true" duration-ms="344" started-at="2021-05-24T11:02:03Z" depends-on-methods="com.jbk.test.LoginTest.CloseBrowser" finished-at="2021-05-24T11:02:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- com.jbk.test.LoginTest -->
+      </class> <!-- com.jbk.test.UsersTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

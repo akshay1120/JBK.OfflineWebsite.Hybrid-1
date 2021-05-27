@@ -6,6 +6,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import com.jbk.pages.LoginPage;
 import com.jbk.pages.OperatorsPage;
 import com.jbk.testbase.TestBase;
 
@@ -13,12 +14,14 @@ public class OperatorsTest extends TestBase
 {
 	WebDriver driver ;
 	OperatorsPage op = null ;
+	LoginPage lp = null ;
 	
 	@BeforeSuite
 	public void OperatorsPg () throws Exception
 	{
 		driver = super.initialization();
-		op = navigateToLoginPg().navigateToDashboardPg().navigateToOperatorsPg();
+		lp = new LoginPage(driver);
+		op = lp.navigateToDashboardPg().navigateToOperatorsPg();
 		op = new OperatorsPage(driver);
 	}
 	

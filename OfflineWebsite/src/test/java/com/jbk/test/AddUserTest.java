@@ -7,18 +7,21 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import com.jbk.pages.AddUserPage;
+import com.jbk.pages.LoginPage;
 import com.jbk.testbase.TestBase;
 
 public class AddUserTest extends TestBase
 {
 	WebDriver driver ;
 	AddUserPage ap = null ;
+	LoginPage lp = null ;
 	
 	@BeforeSuite
 	public void OpenBrowser () throws Exception
 	{
 		driver = initialization();
-		ap = navigateToLoginPg().navigateToDashboardPg().navigateToUsersPg().navigateToAddUserPg();
+		lp = new LoginPage(driver);
+		ap = lp.navigateToDashboardPg().navigateToUsersPg().navigateToAddUserPg();
 		ap = new AddUserPage(driver);
 	}
 	

@@ -6,6 +6,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import com.jbk.pages.LoginPage;
 import com.jbk.pages.UsefulLinksPage;
 import com.jbk.testbase.TestBase;
 
@@ -13,12 +14,14 @@ public class UsefulLinksTest extends TestBase
 {
 	WebDriver driver ;
 	UsefulLinksPage ulp = null ;
+	LoginPage lp = null ;
 	
 	@BeforeSuite
 	public void OpenBrowser () throws Exception
 	{
 		driver = initialization();
-		ulp = navigateToLoginPg().navigateToDashboardPg().navigateToUsefulLinksPg();
+		lp = new LoginPage(driver);
+		ulp = lp.navigateToDashboardPg().navigateToUsefulLinksPg();
 		ulp = new UsefulLinksPage(driver);
 	}
 	

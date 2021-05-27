@@ -5,7 +5,9 @@ import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class DownloadsPgObjRepo 
+import com.jbk.testbase.TestBase;
+
+public class DownloadsPgObjRepo extends TestBase
 {
 	@FindBy(id="email")
 	public WebElement uname ;
