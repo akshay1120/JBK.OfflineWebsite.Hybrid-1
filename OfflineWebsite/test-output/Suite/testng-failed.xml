@@ -3,12 +3,47 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.jbk.test.DashboardTest">
+      <class name="com.jbk.test.LoginTest">
         <methods>
-          <include name="CloseBrowser"/>
+          <include name="setExtent"/>
+          <include name="verifyUrl"/>
+          <include name="endReport"/>
+          <include name="tearDown"/>
+          <include name="OpenBrowser"/>
+        </methods>
+      </class> <!-- com.jbk.test.LoginTest -->
+      <class name="com.jbk.test.AddUserTest">
+        <methods>
           <include name="setExtent"/>
           <include name="endReport"/>
-          <include name="verifyFooterStatement"/>
+          <include name="OpenBrowser"/>
+          <include name="tearDown"/>
+          <include name="verifyPrintingDragDownOptions"/>
+        </methods>
+      </class> <!-- com.jbk.test.AddUserTest -->
+      <class name="com.jbk.test.OperatorsTest">
+        <methods>
+          <include name="setExtent"/>
+          <include name="endReport"/>
+          <include name="OperatorsPg"/>
+          <include name="verifycontactNoLength"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.jbk.test.OperatorsTest -->
+      <class name="com.jbk.test.UsersTest">
+        <methods>
+          <include name="setExtent"/>
+          <include name="endReport"/>
+          <include name="tearDown"/>
+          <include name="verifyHeadingsAl"/>
+          <include name="OpenBrowser"/>
+        </methods>
+      </class> <!-- com.jbk.test.UsersTest -->
+      <class name="com.jbk.test.DashboardTest">
+        <methods>
+          <include name="verifyUrl"/>
+          <include name="setExtent"/>
+          <include name="endReport"/>
           <include name="tearDown"/>
           <include name="OpenBrowser"/>
         </methods>

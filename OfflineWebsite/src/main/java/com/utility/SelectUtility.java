@@ -3,9 +3,7 @@ package com.utility;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import com.jbk.testbase.TestBase;
-
-public class SelectUtility extends TestBase
+public class SelectUtility 
 {
 	public static void selectProductByText (WebElement element , String text)
 	{

@@ -9,11 +9,11 @@ import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.WebDriver;
 
-import com.jbk.testbase.TestBase;
-
-public class ExcelUtility extends TestBase
+public class ExcelUtility 
 {
+	WebDriver driver;
 	
 	// To get data from particular Column..
 	public static ArrayList<String> getTableColData(String fileNm, String sheetNm, int colNo, int fromRow)throws Exception

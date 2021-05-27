@@ -3,13 +3,19 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.jbk.test.UsersTest">
+      <class name="com.jbk.test.DashboardTest">
         <methods>
+          <include name="verifyCourseHeading"/>
           <include name="CloseBrowser"/>
-          <include name="verifyHeadingsAl"/>
+          <include name="setExtent"/>
+          <include name="endReport"/>
+          <include name="tearDown"/>
+          <include name="verifyCourseSubHeading"/>
           <include name="OpenBrowser"/>
+          <include name="verifyJBK_Link"/>
+          <include name="verifySequence"/>
         </methods>
-      </class> <!-- com.jbk.test.UsersTest -->
+      </class> <!-- com.jbk.test.DashboardTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

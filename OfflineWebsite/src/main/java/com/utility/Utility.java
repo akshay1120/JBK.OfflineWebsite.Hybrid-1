@@ -7,9 +7,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.jbk.testbase.TestBase;
-
-public class Utility extends TestBase
+public class Utility 
 {
 	WebDriver driver ;
 	

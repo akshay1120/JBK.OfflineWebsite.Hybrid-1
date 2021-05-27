@@ -2,7 +2,6 @@ package com.jbk.test;
 
 import java.io.IOException;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -14,14 +13,19 @@ import com.utility.ExcelUtility;
 
 public class LoginTest extends TestBase
 {
-	WebDriver driver ;
 	LoginPage lp = null ;
 	
 	@BeforeSuite
-	public void OpenBrowser () throws IOException
+	public void openBrowser() throws IOException
 	{
 		driver = initialization();
 		lp = new LoginPage(driver);
+	}
+	
+	@AfterSuite
+	public void closeBrowser()
+	{
+		driver.close();
 	}
 	
 	@Test (priority=1)
@@ -157,11 +161,5 @@ public class LoginTest extends TestBase
 		logT().info("verifying the Login Without Heading Excel Data");
 		testLog = extent.createTest("verifying the Login Without Heading Excel Data");
 		lp.loginWithAllData(ExcelUtility.readUnameAndPass("Data.xlsx", "LoginWithoutHeading", 0, 1 , 0),testLog);
-	}
-	
-	@AfterSuite
-	public void CloseBrowser()
-	{
-		driver.quit();
 	}
 }

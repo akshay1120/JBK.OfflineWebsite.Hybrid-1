@@ -490,7 +490,7 @@ public class DashboardPage extends DashboardPgObjRepo
 		logP().info("expected New Window Urls = " + expNewWindowUrls);
 		test.info("expected New Window Urls = " + expNewWindowUrls);
 		
-		ArrayList <String> actNewWindowUrls  = WindowHandlingUtility.getWindowsUrls(moreInfo);
+		ArrayList <String> actNewWindowUrls  = WindowHandlingUtility.getWindowsUrls(driver ,moreInfo);
 		logP().info("actual New Window Urls = " + actNewWindowUrls);
 		test.info("actual New Window Urls = " + actNewWindowUrls);
 		
@@ -536,7 +536,7 @@ public class DashboardPage extends DashboardPgObjRepo
 	//20
 	public boolean jbk_Link (ExtentTest test) throws Exception 
 	{	
-		String actWindowTitle = WindowHandlingUtility.getWindowTitle(jbkLink);
+		String actWindowTitle = WindowHandlingUtility.getWindowTitle(driver , jbkLink);
 		logP().info("actual Window Title = " + actWindowTitle);
 		test.info("actual Window Title = " + actWindowTitle);
 		

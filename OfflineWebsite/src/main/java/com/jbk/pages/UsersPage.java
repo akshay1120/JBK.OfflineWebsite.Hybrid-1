@@ -51,25 +51,25 @@ public class UsersPage extends UsersPgObjRepo
 	public boolean mobNoLength(ExtentTest test)
 	{
 		ArrayList<String>actData = Utility.getListLengthXYZ(mobCol, unameCol, 10);
-		logP().info("");
-		test.info("");
+		logP().info("Actual List = " + actData);
+		test.info("Actual List = " + actData);
 		
 		ArrayList<String>expData = new ArrayList<>();
 		expData.add("Kiran");
 		expData.add("Monica");
-		logP().info("");
-		test.info("");
+		logP().info("Expected List = " + expData);
+		test.info("Expected List = " + expData);
 		
 		if(actData.equals(expData))
 		{
-			logP().info("");
-			test.info("");
+			logP().info("Actual and Expected list matched");
+			test.info("Actual and Expected list matched");
 			return true ;
 		}
 		else
 		{
-			logP().info("");
-			test.info("");
+			logP().info("Actual and Expected list not matched");
+			test.info("Actual and Expected list not matched");
 			return false ;
 		}		
 	}
@@ -78,25 +78,25 @@ public class UsersPage extends UsersPgObjRepo
 	public boolean maleGender(ExtentTest test)
 	{
 		ArrayList<String>actData = Utility.getListEqualsXYZ(genderCol, unameCol, "Male");
-		logP().info("");
-		test.info("");
+		logP().info("Actual List = " + actData);
+		test.info("Actual List = " + actData);
 		
 		ArrayList<String>expData = new ArrayList<>();
 		expData.add("Kiran");
 		expData.add("Sagar");
-		logP().info("");
-		test.info("");
+		logP().info("Expected List = " + expData);
+		test.info("Expected List = " + expData);
 		
 		if(actData.equals(expData))
 		{
-			logP().info("");
-			test.info("");
+			logP().info("Actual and Expected list matched");
+			test.info("Actual and Expected list matched");
 			return true ;
 		}
 		else
 		{
-			logP().info("");
-			test.info("");
+			logP().info("Actual and Expected list not matched");
+			test.info("Actual and Expected list not matched");
 			return false ;
 		}	
 	}
@@ -111,23 +111,23 @@ public class UsersPage extends UsersPgObjRepo
 		expData.add("Kiran");
 		expData.add("Monica");
 		expData.add("Sagar");
-		logP().info("");
-		test.info("");
+		logP().info("Expected List = " + expData);
+		test.info("Expected List = " + expData);
 		
 		Collections.sort(actData);
-		logP().info("");
-		test.info("");
+		logP().info("Actual List = " + actData);
+		test.info("Actual List = " + actData);
 		
 		if(actData.equals(expData))
 		{
-			logP().info("");
-			test.info("");
+			logP().info("Actual and Expected list matched");
+			test.info("Actual and Expected list matched");
 			return true ;
 		}
 		else
 		{
-			logP().info("");
-			test.info("");
+			logP().info("Actual and Expected list not matched");
+			test.info("Actual and Expected list not matched");
 			return false ;
 		}
 	}
@@ -136,25 +136,25 @@ public class UsersPage extends UsersPgObjRepo
 	public boolean stateMaharashtra(ExtentTest test)
 	{
 		ArrayList<String>actData = Utility.getListEqualsXYZ(stateCol, unameCol, "Maharashtra");
-		logP().info("");
-		test.info("");
+		logP().info("Actual List = " + actData);
+		test.info("Actual List = " + actData);;
 		
 		ArrayList<String>expData = new ArrayList<String>();
 		expData.add("Kiran");
 		expData.add("Monica");
-		logP().info("");
-		test.info("");
+		logP().info("Expected List = " + expData);
+		test.info("Expected List = " + expData);
 		
 		if(actData.equals(expData))
 		{
-			logP().info("");
-			test.info("");
+			logP().info("Actual and Expected list matched");
+			test.info("Actual and Expected list matched");
 			return true ;
 		}
 		else
 		{
-			logP().info("");
-			test.info("");
+			logP().info("Actual and Expected list not matched");
+			test.info("Actual and Expected list not matched");
 			return false ;
 		}
 	}
@@ -163,27 +163,27 @@ public class UsersPage extends UsersPgObjRepo
 	public boolean gmail_com(ExtentTest test)
 	{
 		ArrayList<String>actData = Utility.getListContainingXYZ(emailCol, unameCol, "@gmail.com");
-		logP().info("");
-		test.info("");
+		logP().info("Actual List = " + actData);
+		test.info("Actual List = " + actData);
 		
 		ArrayList<String>expData = new ArrayList<String>();
 		expData.add("Kiran");
 		expData.add("Sagar");
 		expData.add("Monica");
 		expData.add("Kimaya");
-		logP().info("");
-		test.info("");
+		logP().info("Expected List = " + expData);
+		test.info("Expected List = " + expData);
 		
 		if(actData.equals(expData))
 		{
-			logP().info("");
-			test.info("");
+			logP().info("Actual and Expected list matched");
+			test.info("Actual and Expected list matched");
 			return true ;
 		}
 		else
 		{
-			logP().info("");
-			test.info("");
+			logP().info("Actual and Expected list not matched");
+			test.info("Actual and Expected list not matched");
 			return false ;
 		}
 	}
@@ -195,16 +195,16 @@ public class UsersPage extends UsersPgObjRepo
 		String msg2 = "Are you sure you want to delete this user" ;
 		
 		ArrayList <String>actData = new ArrayList <String>();
-		logP().info("");
-		test.info("");
+		logP().info("Actual List = " + actData);
+		test.info("Actual List = " + actData);
 		
 		ArrayList <String>expData = new ArrayList <String>();
 		expData.add(msg1);
 		expData.add(msg2);
 		expData.add(msg1);
 		expData.add(msg2);
-		logP().info("");
-		test.info("");
+		logP().info("Expected List = " + expData);
+		test.info("Expected List = " + expData);
 		
 		actionCol.get(0).click();
 		Alert al = driver.switchTo().alert();
@@ -236,14 +236,14 @@ public class UsersPage extends UsersPgObjRepo
         
 			if(actData.equals(expData))
 			{
-				logP().info("");
-				test.info("");
+				logP().info("Actual and Expected list matched");
+				test.info("Actual and Expected list matched");
 				return true ;
 			}
 			else
 			{
-				logP().info("");
-				test.info("");
+				logP().info("Actual and Expected list not matched");
+				test.info("Actual and Expected list not matched");
 				return false ;
 			}
 	}
@@ -252,24 +252,24 @@ public class UsersPage extends UsersPgObjRepo
 	public boolean seleniumFaculty(ExtentTest test)
 	{
 		ArrayList<String>actData = Utility.getListEqualsXYZ(courseCol, unameCol, "Selenium");
-		logP().info("");
-		test.info("");
+		logP().info("Actual List = " + actData);
+		test.info("Actual List = " + actData);
 		
 		ArrayList<String>expData = new ArrayList<String>();
 		expData.add("Sagar");
-		logP().info("");
-		test.info("");
+		logP().info("Expected List = " + expData);
+		test.info("Expected List = " + expData);
 		
 		if(actData.equals(expData))
 		{
-			logP().info("");
-			test.info("");
+			logP().info("Actual and Expected list matched");
+			test.info("Actual and Expected list matched");
 			return true ;
 		}
 		else
 		{
-			logP().info("");
-			test.info("");
+			logP().info("Actual and Expected list not matched");
+			test.info("Actual and Expected list not matched");
 			return false ;
 		}
 	}
@@ -278,27 +278,27 @@ public class UsersPage extends UsersPgObjRepo
 	public boolean toolTip(ExtentTest test)
 	{
 		ArrayList<String>actData = Utility.getToolTipsList(delete);
-		logP().info("");
-		test.info("");
+		logP().info("Actual List = " + actData);
+		test.info("Actual List = " + actData);
 		
 		ArrayList<String>expData = new ArrayList<String>();
 		expData.add("Click to Delete");
 		expData.add("Click to Delete");
 		expData.add("Click to Delete");
 		expData.add("Click to Delete");
-		logP().info("");
-		test.info("");
+		logP().info("Expected List = " + expData);
+		test.info("Expected List = " + expData);
 		
 		if(actData.equals(expData))
 		{
-			logP().info("");
-			test.info("");
+			logP().info("Actual and Expected list matched");
+			test.info("Actual and Expected list matched");
 			return true ;
 		}
 		else
 		{
-			logP().info("");
-			test.info("");
+			logP().info("Actual and Expected list not matched");
+			test.info("Actual and Expected list not matched");
 			return false ;
 		}
 	}
@@ -307,23 +307,23 @@ public class UsersPage extends UsersPgObjRepo
 	public boolean CompleteUsersTable(ExtentTest test) throws Exception
 	{
 		ArrayList <String>actData = Utility.getCompleteSheetData(headings, tableData);
-		logP().info("");
-		test.info("");
+		logP().info("Actual List = " + actData);
+		test.info("Actual List = " + actData);
 		
 		ArrayList <String>expData = ExcelUtility.getTableData("Data.xlsx", "Users");
-		logP().info("");
-		test.info("");
+		logP().info("Expected List = " + expData);
+		test.info("Expected List = " + expData);
 		
 		if(actData.equals(expData))
 		{
-			logP().info("");
-			test.info("");
+			logP().info("Actual and Expected list matched");
+			test.info("Actual and Expected list matched");
 			return true ;
 		}
 		else
 		{
-			logP().info("");
-			test.info("");
+			logP().info("Actual and Expected list not matched");
+			test.info("Actual and Expected list not matched");
 			return false ;
 		}
 	}

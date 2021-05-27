@@ -7,12 +7,11 @@ import java.util.Set;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.jbk.testbase.TestBase;
-
-public class WindowHandlingUtility extends TestBase
+public class WindowHandlingUtility
 {
+	WebDriver driver;
 	// 1 
-	public static String getWindowTitle(WebElement Element) throws Exception 
+	public static String getWindowTitle(WebDriver driver , WebElement Element) throws Exception 
 	{
 		String parent = driver.getWindowHandle();
 		
@@ -37,7 +36,7 @@ public class WindowHandlingUtility extends TestBase
 	}
 	
 	// 2
-	public static String getWindowUrl(WebElement Element) throws Exception 
+	public static String getWindowUrl(WebDriver driver , WebElement Element) throws Exception 
 	{
 		String parent = driver.getWindowHandle();
 		
@@ -62,7 +61,7 @@ public class WindowHandlingUtility extends TestBase
 	}
 	
 	// 3
-	public static ArrayList <String> getWindowsUrls(List<WebElement> listWbEle ) throws Exception 
+	public static ArrayList <String> getWindowsUrls(WebDriver driver , List<WebElement> listWbEle ) throws Exception 
 	{
 		ArrayList <String> actNewWindowUrls  = new ArrayList <String>();
 
@@ -94,7 +93,7 @@ public class WindowHandlingUtility extends TestBase
 	}
 	
 	// 4
-	public static ArrayList <String> getWindowsTitles(List<WebElement> listWbEle) throws Exception 
+	public static ArrayList <String> getWindowsTitles(WebDriver driver , List<WebElement> listWbEle) throws Exception 
 	{
 		ArrayList <String> actNewWindowTitles  = new ArrayList <String>();
 

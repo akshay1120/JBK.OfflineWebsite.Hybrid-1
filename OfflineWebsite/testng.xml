@@ -8,8 +8,8 @@
       <class name="com.jbk.test.DashboardTest"/>
       <class name="com.jbk.test.LoginTest"/>
       <class name="com.jbk.test.OperatorsTest"/>
-      <class name="com.jbk.test.DownloadsTest"/>
       <class name="com.jbk.test.UsersTest"/>
+      <class name="com.jbk.test.DownloadsTest"/>
       <class name="com.jbk.test.AddUserTest"/>
     </classes>
   </test> <!-- Test -->
